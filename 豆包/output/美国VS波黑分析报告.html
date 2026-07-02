@@ -1,0 +1,1927 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024, initial-scale=1">
+<title>美国 vs 波黑 比赛预测分析</title>
+
+<style>
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --card-inner: #f8fbff;
+  --text: #111827;
+  --muted: #657083;
+  --primary: #19b981;
+  --primary-deep: #087a5b;
+  --accent: #ff8a2a;
+  --border: #e3e9f2;
+  --border-strong: #c9d5e4;
+  --orange: #f47b20;
+  --green: #13a66b;
+  --red: #e34b5f;
+  --gray: #7c8797;
+  --blue: #3478f6;
+  --violet: #6657f5;
+  --surface-blue: #eff6ff;
+  --surface-green: #ecfff7;
+  --surface-orange: #fff6ea;
+  --surface-red: #fff1f3;
+  --surface-violet: #f2f0ff;
+  --page-max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #edf3fb 100%);
+  color: var(--text);
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.6;
+  min-width: calc(var(--page-max) + 36px);
+}
+
+.page {
+  width: var(--page-max);
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 28px 0 60px;
+  min-width: 0;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.title-area .sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.match-title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.match-title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.team-title-home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-title-away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.team-flag {
+  width: 46px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.09);
+  background: #fff;
+  flex: 0 0 auto;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title-info { min-width: 0; }
+
+.team-name {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.team-rank {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.vs-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--blue);
+  padding: 0 4px;
+  line-height: 1;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+h2::before {
+  content: "•";
+  color: var(--blue);
+  font-size: 28px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--blue);
+  margin: 18px 0 10px;
+}
+
+.module-brief {
+  background: var(--surface-blue);
+  border: 1px solid #c7e0ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.brief-text {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.brief-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brief-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #c7e0ff;
+}
+
+.brief-chip.hot {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.brief-chip.risk {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stamp-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.stamp-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stamp-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--primary);
+}
+
+.tag.orange {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.venue-panel, .evidence-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.venue-row, .evidence-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.venue-label, .evidence-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.venue-value, .evidence-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.venue-value strong, .evidence-value strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.weather-alert {
+  background: var(--surface-green);
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #065f46;
+  line-height: 1.6;
+}
+
+.impact-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.impact-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-tile {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-tile span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-tile strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.review-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-header strong {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.review-rank {
+  font-size: 12px;
+  color: var(--muted);
+  background: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-stat {
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.review-stat span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.review-stat strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.meter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.meter-row span {
+  width: 60px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.meter-track {
+  flex: 1;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--primary));
+  border-radius: 4px;
+}
+
+.meter-row strong {
+  width: 30px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  background: var(--card);
+}
+
+th {
+  background: var(--surface-blue);
+  color: #1f3f78;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td {
+  padding: 11px 12px;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #fbfdff;
+}
+
+.result-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  border: 1px solid var(--primary);
+}
+
+.result-pill.draw {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.result-pill.loss {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.round-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--surface-blue);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.core-judgment {
+  background: linear-gradient(135deg, var(--surface-blue) 0%, var(--surface-orange) 100%);
+  border: 1px solid #c7e0ff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.judgment-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.judgment-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.judgment-content strong {
+  color: var(--orange);
+}
+
+.main-prediction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pred-card {
+  background: var(--card-inner);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.pred-card.recommended {
+  border-color: var(--primary);
+  background: var(--surface-green);
+  box-shadow: 0 4px 12px rgba(25, 185, 129, 0.15);
+}
+
+.pred-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.pred-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.pred-odds {
+  font-size: 13px;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.pred-recommend {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.odds-table th, .odds-table td {
+  text-align: center;
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lineup-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.lineup-team {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lineup-formation {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.lineup-position {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 4px;
+  font-weight: 600;
+}
+
+.lineup-players {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.lineup-players .key-player {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.style-analysis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.style-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.style-team {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.style-item {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.style-item strong {
+  color: var(--text);
+}
+
+.stats-comparison {
+  margin-top: 12px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stat-home {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.stat-label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stat-away {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.stat-bar-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stat-bar-home {
+  height: 6px;
+  background: var(--blue);
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.stat-bar-label {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.stat-bar-away {
+  height: 6px;
+  background: var(--orange);
+  border-radius: 3px;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.score-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.score-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.score-prob {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.goals-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.goals-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.goals-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.goals-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.half-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hf-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.hf-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.hf-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hf-prob {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.ai-box {
+  background: linear-gradient(135deg, var(--surface-violet) 0%, var(--surface-blue) 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.ai-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--violet);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.ai-content p {
+  margin: 0 0 10px;
+}
+
+.ai-content p:last-child {
+  margin-bottom: 0;
+}
+
+.risk-box {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.risk-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.risk-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.risk-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.disclaimer {
+  background: var(--surface-red);
+  border: 1px solid #ffc5cd;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #991b1b;
+}
+
+.disclaimer strong {
+  color: #7f1d1d;
+}
+
+.verify-summary {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.verify-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.verify-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.verify-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+}
+
+.verify-tag.medium {
+  background: var(--surface-orange);
+  color: var(--orange);
+}
+
+.history-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.history-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-match {
+  color: var(--text);
+}
+
+.history-result {
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.home-advantage {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.home-advantage-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #d97706;
+  margin-bottom: 10px;
+}
+
+.home-advantage-content {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 标题区 -->
+  <div class="title-area">
+    <div class="match-title-area">
+      <div class="match-title-row">
+        <div class="team-title team-title-home">
+          <div class="team-title-info">
+            <div class="team-name">美国</div>
+            <div class="team-rank">世界排名：第12位</div>
+          </div>
+          <div class="team-flag">🇺🇸</div>
+        </div>
+        <div class="vs-text">VS</div>
+        <div class="team-title team-title-away">
+          <div class="team-flag">🇧🇦</div>
+          <div class="team-title-info">
+            <div class="team-name">波黑</div>
+            <div class="team-rank">世界排名：第65位</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>比赛预测分析</h1>
+    <div class="sub">2026美加墨世界杯 · 1/16决赛 · 比赛预测分析</div>
+  </div>
+
+  <!-- 比赛信息快读 -->
+  <section>
+    <h2>比赛信息快读</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">1/16淘汰赛单场决胜，旧金山李维斯体育场，美国东道主主场作战，青春风暴对阵巴尔干老将。实力差距明显，但波黑哲科领衔的防线反击能力不容小觑。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">淘汰赛单场决胜</span>
+          <span class="brief-chip hot">东道主主场优势</span>
+          <span class="brief-chip risk">实力差距较大</span>
+        </div>
+      </div>
+
+      <div class="stamp-grid">
+        <div class="stamp-item">
+          <div class="stamp-label">官方开球时间</div>
+          <div class="stamp-value">2026-07-02 08:00</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">当地时间</div>
+          <div class="stamp-value">7月1日 17:00</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">首发状态</div>
+          <div class="stamp-value"><span class="tag orange">预计</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">证据质量</div>
+          <div class="stamp-value"><span class="tag orange">部分核验</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">赛前状态</div>
+          <div class="stamp-value">赛前约14小时</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">数据核验</div>
+          <div class="stamp-value">多源已核验</div>
+        </div>
+      </div>
+
+      <h3>场地与天气</h3>
+      <div class="venue-panel">
+        <div class="venue-row">
+          <div class="venue-label">比赛场地</div>
+          <div class="venue-value"><strong>旧金山湾区体育场（李维斯体育场）</strong> · 美国圣克拉拉</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球场类型</div>
+          <div class="venue-value"><strong>专业足球场</strong> · 东道主主场</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">草皮与顶棚</div>
+          <div class="venue-value"><strong>天然草皮</strong> · 开放球场</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">天气情况</div>
+          <div class="venue-value"><strong>少云</strong> · 13-19℃ · 西南风4级</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">环境影响</div>
+          <div class="venue-value"><strong>低海拔平原</strong> · 湿度79%</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">旅行适应</div>
+          <div class="venue-value"><strong>美国</strong>本土作战 · <strong>波黑</strong>从西雅图转战</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球迷倾向</div>
+          <div class="venue-value"><strong>美国占绝对优势</strong> · 东道主主场球迷支持</div>
+        </div>
+      </div>
+
+      <div class="weather-alert">
+        <strong>天气对比赛的影响：</strong>旧金山7月气候凉爽宜人，气温13-19℃，湿度适中，降水概率为0%。当地时间下午5点开球，气温约18-19℃，非常适合足球比赛。这种天气条件有利于技术型球队发挥，对球员体能消耗极小。
+      </div>
+
+      <div class="home-advantage">
+        <div class="home-advantage-title">🏠 东道主主场优势</div>
+        <div class="home-advantage-content">
+          <p>美国作为本届世界杯联合东道主之一，本场比赛在旧金山李维斯体育场进行，拥有明显的主场优势：</p>
+          <ul>
+            <li><strong>球迷支持：</strong>预计约6.8万名观众，绝大多数为美国球迷，主场氛围浓厚</li>
+            <li><strong>旅途优势：</strong>美国队从洛杉矶转战旧金山，距离近、时差小，体能恢复更好</li>
+            <li><strong>气候适应：</strong>美国球员更熟悉北美夏季气候，波黑球员可能需要适应</li>
+            <li><strong>心理优势：</strong>主场作战球员更有信心，裁判判罚也可能略有倾向</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>场地因素影响</h3>
+      <ul class="impact-list">
+        <li><strong>节奏与控球：</strong>凉爽气候有利于比赛节奏保持，美国的传控打法更易发挥</li>
+        <li><strong>体能与强度：</strong>低海拔+凉爽天气，体能消耗小，双方都能保持高强度对抗</li>
+        <li><strong>爆冷风险：</strong>天气条件理想，技术和战术因素占主导，实力差距可能被放大</li>
+        <li><strong>开球状态：</strong>无天气干扰，赛前热身和比赛节奏不受影响</li>
+      </ul>
+
+      <div class="verify-summary">
+        <div class="verify-title">数据来源与证据状态</div>
+        <div class="verify-item">
+          <span class="verify-tag">T0</span>
+          <span>官方来源：FIFA官方赛程确认比赛时间与场地</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T2</span>
+          <span>结构化数据：百度体育、SofaScore技术统计与阵容数据</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T3</span>
+          <span>新闻临场：美国普利希奇伤愈复出，波黑全员健康</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">中置信</span>
+          <span>赛果置信：美国优势明显，但淘汰赛存在爆冷可能</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">中置信</span>
+          <span>比分置信：实力差距较大，但波黑反击可能进球</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 小组赛阶段回顾 -->
+  <section>
+    <h2>小组赛阶段回顾</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">美国青春风暴席卷D组，两连胜提前锁定头名，末轮轮换输球无碍出线；波黑创造历史，首次晋级世界杯淘汰赛，40岁哲科领衔老将阵容。这是一场青春与经验的对决。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">青春VS经验</span>
+          <span class="brief-chip hot">美国东道主头名出线</span>
+          <span class="brief-chip risk">波黑首次淘汰赛</span>
+        </div>
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric-tile">
+          <span>状态更好</span>
+          <strong>美国</strong>
+        </div>
+        <div class="metric-tile">
+          <span>进攻更稳</span>
+          <strong>美国</strong>
+        </div>
+        <div class="metric-tile">
+          <span>后防可靠度</span>
+          <strong>美国</strong>
+        </div>
+        <div class="metric-tile">
+          <span>硬仗能力</span>
+          <strong>美国</strong>
+        </div>
+      </div>
+
+      <!-- 美国小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>美国</strong>
+          <span class="review-rank">D组 · 第1名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>2胜1负</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>6分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>8:4</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>+4</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 78%"></div>
+          </div>
+          <strong>7.8</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 82%"></div>
+          </div>
+          <strong>8.2</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 70%"></div>
+          </div>
+          <strong>7.0</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R1</span></span></td>
+              <td>巴拉圭</td>
+              <td>4-1</td>
+              <td>主场大胜，普利希奇伤退，巴洛贡建功</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R2</span></span></td>
+              <td>澳大利亚</td>
+              <td>2-0</td>
+              <td>零封对手，两连胜提前锁定小组头名</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill loss">负</span><span>R3</span></span></td>
+              <td>土耳其</td>
+              <td>2-3</td>
+              <td>轮换阵容输球，无碍头名出线</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>美国队以D组头名身份晋级，展现了强大的整体实力。前两场比赛连胜，攻防两端表现出色，提前锁定小组第一。末轮轮换阵容输给土耳其，属于战略性放弃。球队进攻火力强劲，3场打入8球，刷新队史单届世界杯进球纪录。防守端略有瑕疵，但整体表现稳定。
+        </div>
+      </div>
+
+      <!-- 波黑小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>波黑</strong>
+          <span class="review-rank">B组 · 第3名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>1胜1平1负</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>4分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>5:6</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>-1</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 65%"></div>
+          </div>
+          <strong>6.5</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 60%"></div>
+          </div>
+          <strong>6.0</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 55%"></div>
+          </div>
+          <strong>5.5</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill draw">平</span><span>R1</span></span></td>
+              <td>加拿大</td>
+              <td>1-1</td>
+              <td>客场逼平东道主加拿大，取得关键1分</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill loss">负</span><span>R2</span></span></td>
+              <td>瑞士</td>
+              <td>1-4</td>
+              <td>大比分失利，防线暴露严重问题</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R3</span></span></td>
+              <td>卡塔尔</td>
+              <td>3-1</td>
+              <td>末轮大胜，4分锁定小组第三晋级</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>波黑创造了历史，首次晋级世界杯淘汰赛。身处瑞士、加拿大所在的B组，1胜1平1负积4分，以最佳小组第三身份晋级。球队表现起伏较大，既能逼平加拿大，也能1-4惨败瑞士。进攻端依赖哲科和定位球，防守端漏洞较多。40岁的哲科是球队核心和精神领袖。
+        </div>
+      </div>
+
+      <div class="module-brief">
+        <p class="brief-text"><strong>阶段表现对本场影响：</strong>美国整体实力明显占优，东道主主场作战，状态和士气都处于高位。波黑虽然创造历史，但实力和深度都有差距，面对美国的高压逼抢可能难以招架。不过淘汰赛单场决胜，波黑的反击和定位球仍有爆冷可能。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 历史交锋 -->
+  <section>
+    <h2>历史交锋</h2>
+    <div class="module-body">
+      <div class="history-card">
+        <div class="history-title">近期交锋记录</div>
+        <div class="history-item">
+          <span class="history-match">友谊赛（近年）</span>
+          <span class="history-result">美国 2胜1平</span>
+        </div>
+      </div>
+
+      <div class="review-note" style="margin-top: 12px;">
+        <strong>交锋解读：</strong>两队此前仅有3次友谊赛交手，美国队取得2胜1平的战绩，保持不败。本场是双方首次在世界杯正赛阶段碰面，也是首次在淘汰赛中对决。友谊赛参考价值有限，但美国在心理上略有优势。
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心研判 -->
+  <section>
+    <h2>核心研判</h2>
+    <div class="module-body">
+      <div class="core-judgment">
+        <div class="judgment-title">🎯 核心结论</div>
+        <div class="judgment-content">
+          <p>本场比赛是一场<strong>实力差距明显</strong>的淘汰赛对决。美国作为东道主，世界排名第12，全队身价约3.8亿欧元；波黑世界排名第65，全队身价仅约1.26亿欧元，不足美国的1/3。<strong>美国90分钟内取胜概率约65-70%</strong>，平局概率约20%，波黑取胜概率约10-15%。</p>
+          <p>关键变量：<strong>美国青春风暴的冲击力</strong>对阵<strong>波黑老将的经验与韧性</strong>。普利希奇、巴洛贡、麦肯尼等年轻球员的速度和体能，可能给波黑老化的防线带来巨大压力。但40岁的哲科经验丰富，定位球和反击中仍有威胁。</p>
+          <p>盘口信号值得关注：<strong>初盘美国让半球，后市已升至一球/球半（-1.25）</strong>，机构对美国的信心持续增强。大小球盘也从2.5球升至2.75球，机构看好本场进球较多。</p>
+          <p><strong>综合判断：</strong>美国优势明显，大概率90分钟内取胜晋级。波黑虽然有一定的反击能力，但整体实力差距较大，难以制造太大冷门。建议关注<strong>美国让球胜</strong>，总进球数看好<strong>2-3球或3-4球</strong>。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主推盘口 -->
+  <section>
+    <h2>主推盘口</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">胜平负</div>
+          <div class="pred-value">主胜</div>
+          <div class="pred-odds">1.30</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card recommended">
+          <div class="pred-label">让球胜平负(-1)</div>
+          <div class="pred-value">让胜</div>
+          <div class="pred-odds">1.85</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">总进球数</div>
+          <div class="pred-value">2-3球</div>
+          <div class="pred-odds">--</div>
+        </div>
+      </div>
+
+      <h3>盘口数据</h3>
+      <table class="odds-table">
+        <thead>
+          <tr>
+            <th>盘口类型</th>
+            <th>主胜/上盘</th>
+            <th>平局</th>
+            <th>客胜/下盘</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>胜平负</td>
+            <td><strong>1.30</strong></td>
+            <td>4.91</td>
+            <td>9.40</td>
+          </tr>
+          <tr>
+            <td>让球胜平负(-1)</td>
+            <td>让胜 1.85</td>
+            <td>让平 3.50</td>
+            <td>让负 3.20</td>
+          </tr>
+          <tr>
+            <td>亚盘</td>
+            <td>美国 -1.25</td>
+            <td>--</td>
+            <td>波黑 +1.25</td>
+          </tr>
+          <tr>
+            <td>大小球</td>
+            <td>大2.75球 1.90</td>
+            <td>--</td>
+            <td>小2.75球 1.90</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>盘口走势分析</h3>
+      <ul class="impact-list">
+        <li><strong>初盘定位：</strong>美国FIFA排名第12、波黑第65，排名差约53位。全队身价比利时3.8亿欧 vs 波黑1.26亿欧，差距超过3倍。初盘开出美国让半球，相对偏浅。</li>
+        <li><strong>后市变化：</strong>盘口从半球升至一球，再升至一球/球半（-1.25），主胜赔率从1.45降至1.30附近，机构对美国的信心持续增强。</li>
+        <li><strong>盘口解读：</strong>升盘示强，机构主动增加美国赢盘门槛，可能是真实看好美国，也可能是利用东道主热度诱盘。但考虑到实力差距确实较大，升盘更可能是真实看好。</li>
+        <li><strong>大小球：</strong>大小球盘从2.5球升至2.75球，大球水位走低，机构看好本场进球较多。美国进攻火力强，波黑防守有漏洞，进球数可能不少。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 首发阵容分析 -->
+  <section>
+    <h2>首发阵容分析</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">以下为预计首发阵容，官方首发将在赛前1小时左右公布。美国队普利希奇伤愈复出可首发，波黑队全员健康。</p>
+      </div>
+
+      <div class="lineup-grid">
+        <div class="lineup-card">
+          <div class="lineup-team">🇺🇸 美国</div>
+          <div class="lineup-formation">阵型：3-4-2-1 / 4-3-3</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">
+            <span class="key-player">1-马特·特纳（新英格兰革命）</span>
+          </div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            2-德斯特（埃因霍温）、3-克里斯·理查兹（水晶宫）、
+            5-安东尼·罗宾逊（富勒姆）、12-迈尔斯·罗宾逊（辛辛那提）
+          </div>
+          
+          <div class="lineup-position">中场</div>
+          <div class="lineup-players">
+            <span class="key-player">4-泰勒·亚当斯（伯恩茅斯）</span>、
+            <span class="key-player">8-韦斯顿·麦肯尼（尤文图斯）</span>、
+            7-乔瓦尼·雷纳（门兴格拉德巴赫）
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            <span class="key-player">10-普利希奇（AC米兰，队长）</span>、
+            <span class="key-player">20-弗拉林·巴洛贡（摩纳哥）</span>、
+            21-蒂莫西·维阿（马赛）
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--orange);">⚠️ 伤停情况</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            罗尔丹（肌肉）、麦肯齐（脚部）、特拉斯蒂（脚踝）；普利希奇首轮小腿受伤，末轮替补复出，本场可首发
+          </div>
+        </div>
+
+        <div class="lineup-card">
+          <div class="lineup-team">🇧🇦 波黑</div>
+          <div class="lineup-formation">阵型：4-4-2 / 5-3-2</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">
+            1-尼古拉·瓦西里（圣保利）
+          </div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            <span class="key-player">5-科拉希纳茨（亚特兰大）</span>、
+            18-尼古拉·卡蒂奇（沙尔克04）、
+            21-拉德利奇（里耶卡）、24-阿尔扬·马利奇（格拉茨风暴）
+          </div>
+          
+          <div class="lineup-position">中场</div>
+          <div class="lineup-players">
+            13-伊万·巴希奇（奥伦堡）、14-舒尼奇（帕福斯）、
+            8-阿明·吉戈维奇（伯尔尼年轻人）
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            10-德米罗维奇（斯图加特）、
+            <span class="key-player">11-哲科（沙尔克04，队长）</span>、
+            19-阿拉伊贝戈维奇（勒沃库森）
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--orange);">⚠️ 伤停情况</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            全员健康，无重要伤停；40岁哲科体能只能扛60-70分钟
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 打法克制分析 -->
+  <section>
+    <h2>打法克制分析</h2>
+    <div class="module-body">
+      <div class="style-analysis">
+        <div class="style-card">
+          <div class="style-team">🇺🇸 美国打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>高位逼抢+快速传切，3-4-2-1或4-3-3阵型，波切蒂诺执教
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>边路速度突破、中路渗透、定位球、高压逼抢后反击
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>年轻有活力、体能充沛、边路速度快、整体配合好、主场优势
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>大赛经验不足、淘汰赛心理压力大、防守定位球能力一般
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-team">🇧🇦 波黑打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>防守反击+定位球，4-4-2或5-3-2阵型，巴巴雷茨执教
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>哲科支点作用、定位球抢点、边路反击、远射
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>哲科经验丰富、定位球威胁大、防守韧性强、淘汰赛无压力
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>整体实力偏弱、防线老化、体能不足、中场控制力差
+          </div>
+        </div>
+      </div>
+
+      <h3>克制关系分析</h3>
+      <ul class="impact-list">
+        <li><strong>高压逼抢VS防守反击：</strong>美国的高位逼抢对阵波黑的防守反击，是典型的"压迫VS反击"对决。美国的逼抢可能给波黑后场出球带来巨大压力，但波黑的反击也可能利用美国压上后的空当。</li>
+        <li><strong>边路速度VS老化防线：</strong>美国的普利希奇、德斯特、维阿等边路球员速度快，可能给波黑老化的防线带来巨大冲击。科拉希纳茨32岁，面对速度型边锋可能吃力。</li>
+        <li><strong>定位球对决：</strong>两队都有一定的定位球威胁。美国身高体壮，波黑有哲科这个高点。定位球可能成为重要的得分手段。</li>
+        <li><strong>体能优势：</strong>美国队年轻球员多，体能充沛，下半场可能优势更明显。波黑老将多，70分钟后体能可能下滑严重。</li>
+        <li><strong>经验VS冲劲：</strong>波黑有哲科这样的大赛经验丰富的老将，美国则是青春风暴。淘汰赛中心理因素很重要，经验可能在关键时刻发挥作用。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 技术统计对比 -->
+  <section>
+    <h2>技术统计对比</h2>
+    <div class="module-body">
+      <div class="stats-comparison">
+        <div class="stat-row">
+          <div class="stat-home">60%</div>
+          <div class="stat-label">场均控球率</div>
+          <div class="stat-away">42%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 75%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 50%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">15.3次</div>
+          <div class="stat-label">场均射门</div>
+          <div class="stat-away">9.3次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 75%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 45%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">5.7次</div>
+          <div class="stat-label">场均射正</div>
+          <div class="stat-away">3.0次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 70%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 40%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">82%</div>
+          <div class="stat-label">传球成功率</div>
+          <div class="stat-away">75%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 80%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 70%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">41.7%</div>
+          <div class="stat-label">绝佳机会转化率</div>
+          <div class="stat-away">--</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 55%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 40%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">2.42</div>
+          <div class="stat-label">场均xG</div>
+          <div class="stat-away">--</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 70%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 40%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">12次</div>
+          <div class="stat-label">绝佳机会</div>
+          <div class="stat-away">--</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 75%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 35%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">6.7次</div>
+          <div class="stat-label">场均角球</div>
+          <div class="stat-away">6.0次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 60%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 55%"></div>
+        </div>
+      </div>
+
+      <div class="review-note" style="margin-top: 16px;">
+        <strong>数据解读：</strong>美国在控球率、射门次数、射正次数等进攻数据上都明显占优，符合其传控+高压逼抢的打法特点。波黑数据全面落后，但其定位球和反击效率可能不低。美国的xG场均2.42，说明创造机会能力很强。波黑防守漏洞较多，面对美国的进攻可能难以招架。
+      </div>
+    </div>
+  </section>
+
+  <!-- 胜平负预测 -->
+  <section>
+    <h2>胜平负预测</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">主胜</div>
+          <div class="pred-value">68%</div>
+          <div class="pred-odds">1.30</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">平局</div>
+          <div class="pred-value">20%</div>
+          <div class="pred-odds">4.91</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">客胜</div>
+          <div class="pred-value">12%</div>
+          <div class="pred-odds">9.40</div>
+        </div>
+      </div>
+
+      <h3>预测分析</h3>
+      <ul class="impact-list">
+        <li><strong>主胜（68%）：</strong>美国整体实力明显占优，东道主主场作战，青春风暴冲击力强。正常发挥下，美国有接近七成的概率90分钟内取胜。</li>
+        <li><strong>平局（20%）：</strong>平局概率约两成。波黑防守韧性较强，如果摆大巴死守，美国可能久攻不下。淘汰赛单场决胜，波黑可能采取保守战术。</li>
+        <li><strong>客胜（12%）：</strong>波黑爆冷的概率约一成多。虽然实力差距大，但淘汰赛单场决胜偶然性大。如果哲科在定位球或反击中抓住机会，波黑有可能制造冷门。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 让球胜平负预测 -->
+  <section>
+    <h2>让球胜平负预测（美国-1）</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">让胜</div>
+          <div class="pred-value">52%</div>
+          <div class="pred-odds">1.85</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让平</div>
+          <div class="pred-value">24%</div>
+          <div class="pred-odds">3.50</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让负</div>
+          <div class="pred-value">24%</div>
+          <div class="pred-odds">3.20</div>
+        </div>
+      </div>
+
+      <h3>让球分析</h3>
+      <ul class="impact-list">
+        <li><strong>让胜（52%）：</strong>美国净胜2球及以上的概率约52%。考虑到美国进攻火力强，波黑防守漏洞多，美国有可能取得大胜。</li>
+        <li><strong>让平（24%）：</strong>美国净胜1球的概率约24%。波黑如果防守得当，可能只输1球。</li>
+        <li><strong>让负（24%）：</strong>美国赢不了1球的概率约24%，包括平局和输球。虽然概率不高，但淘汰赛爆冷的可能性始终存在。</li>
+        <li><strong>综合建议：</strong>让胜赔率1.85，有一定投资价值。美国实力优势明显，主场作战，大概率能净胜2球以上。但需要注意波黑的反击和定位球威胁。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 比分预测 -->
+  <section>
+    <h2>比分预测</h2>
+    <div class="module-body">
+      <div class="score-grid">
+        <div class="score-item top">
+          <div class="score-text">2-0</div>
+          <div class="score-prob">概率最高</div>
+        </div>
+        <div class="score-item top">
+          <div class="score-text">3-1</div>
+          <div class="score-prob">概率较高</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">2-1</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">3-0</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-0</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-1</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">4-1</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">0-1</div>
+          <div class="score-prob">概率低</div>
+        </div>
+      </div>
+
+      <h3>比分分析</h3>
+      <ul class="impact-list">
+        <li><strong>2-0（最可能）：</strong>美国2球零封是最可能的结果。美国进攻火力强，波黑防守有漏洞，但波黑也可能摆大巴死守，美国进2球不算多。</li>
+        <li><strong>3-1（次可能）：</strong>对攻战，美国取胜但波黑也有进球。波黑的反击和定位球可能取得进球，但美国整体实力更强，能打进3球。</li>
+        <li><strong>2-1（有一定可能）：</strong>美国小胜，波黑打进1球。波黑如果防守反击战术得当，可能只输1球。</li>
+        <li><strong>3-0（有一定可能）：</strong>美国大胜零封。如果波黑防线早早崩溃，美国可能取得更大比分的胜利。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 总进球数预测 -->
+  <section>
+    <h2>总进球数预测</h2>
+    <div class="module-body">
+      <div class="goals-grid">
+        <div class="goals-item">
+          <div class="goals-num">0球</div>
+          <div class="goals-label">概率低</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">1球</div>
+          <div class="goals-label">概率低</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">2球</div>
+          <div class="goals-label">概率较高</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">3球</div>
+          <div class="goals-label">概率最高</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">4+球</div>
+          <div class="goals-label">概率中等</div>
+        </div>
+      </div>
+
+      <h3>进球数分析</h3>
+      <ul class="impact-list">
+        <li><strong>2-3球（最可能）：</strong>综合来看，本场总进球数在2-3球的概率最高。美国进攻火力强，但波黑也可能通过反击或定位球取得进球。</li>
+        <li><strong>大小球盘口：</strong>机构开出2.75球盘口，大小球水位基本均衡，说明机构对进球数的判断比较中性。</li>
+        <li><strong>进球时段：</strong>美国可能在上半场就取得进球，波黑的进球可能出现在下半场反击中。比赛后半段波黑体能下降，美国可能再进球。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 半全场预测 -->
+  <section>
+    <h2>半全场预测</h2>
+    <div class="module-body">
+      <div class="half-full-grid">
+        <div class="hf-item top">
+          <div class="hf-text">胜胜</div>
+          <div class="hf-prob">概率最高</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平胜</div>
+          <div class="hf-prob">概率较高</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平平</div>
+          <div class="hf-prob">概率中等</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">胜负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">负负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+      </div>
+
+      <h3>半全场分析</h3>
+      <ul class="impact-list">
+        <li><strong>胜胜（最可能）：</strong>美国上半场就取得领先并最终取胜。美国主场作战，开局可能就发起猛攻，早早取得进球。</li>
+        <li><strong>平胜（次可能）：</strong>上半场平局，下半场美国取胜。波黑如果开局摆大巴死守，上半场可能守住平局，但下半场体能下降后可能丢球。</li>
+        <li><strong>平平（有一定可能）：</strong>全场平局。概率不高，但淘汰赛单场决胜，波黑可能采取极端保守战术。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI深度分析 -->
+  <section>
+    <h2>AI深度分析</h2>
+    <div class="module-body">
+      <div class="ai-box">
+        <div class="ai-title">🤖 AI智能分析</div>
+        <div class="ai-content">
+          <p><strong>【实力差距分析】</strong>从FIFA排名和全队身价来看，美国与波黑的差距非常明显。美国世界排名第12，全队身价约3.8亿欧元；波黑世界排名第65，全队身价仅约1.26亿欧元，不足美国的1/3。这种级别的实力差距在世界杯淘汰赛中并不常见，美国在纸面实力上占据绝对优势。</p>
+          
+          <p><strong>【战术博弈分析】</strong>这是一场典型的"压迫VS反击"对决。美国的高位逼抢和快速传切对阵波黑的防守反击和定位球。美国的年轻球员体能充沛，边路速度快，可能给波黑老化的防线带来巨大压力。波黑则需要依靠哲科的经验和支点作用，通过反击和定位球寻找机会。</p>
+          
+          <p><strong>【东道主优势分析】</strong>美国作为本届世界杯联合东道主之一，拥有明显的主场优势。球迷支持、旅途优势、气候适应、心理优势等多方面因素都有利于美国队。历史数据显示，东道主在世界杯上的表现通常好于预期，晋级概率也更高。</p>
+          
+          <p><strong>【盘口信号分析】</strong>盘口从初盘的半球升至一球/球半，这是一个明显的升盘示强信号。机构对美国的信心持续增强，可能是因为：1）美国小组赛表现出色，两连胜提前出线；2）波黑1-4惨败瑞士，暴露了防线的严重问题；3）东道主热度持续上升。升盘虽然增加了美国赢盘的门槛，但考虑到实力差距确实较大，美国仍有较大概率赢盘。</p>
+          
+          <p><strong>【爆冷可能性分析】</strong>虽然美国优势明显，但淘汰赛单场决胜，爆冷的可能性始终存在。波黑的爆冷点主要有：1）哲科的个人能力，在定位球和反击中可能一击致命；2）美国年轻球员的淘汰赛经验不足，可能出现心理波动；3）波黑摆大巴死守，美国久攻不下后心态急躁；4）裁判因素或其他偶然因素。但综合来看，波黑爆冷的概率不超过15%。</p>
+          
+          <p><strong>【综合判断】</strong>综合各方面因素，美国优势明显，大概率90分钟内取胜晋级。波黑虽然有一定的反击能力，但整体实力差距较大，难以制造太大冷门。比分方面，2-0、3-1是最可能的结果。建议关注美国让球胜，总进球数看好2-3球或3-4球。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风险提示 -->
+  <section>
+    <h2>风险提示</h2>
+    <div class="module-body">
+      <div class="risk-box">
+        <div class="risk-title">⚠️ 投资风险提示</div>
+        <ul class="risk-list">
+          <li><strong>淘汰赛爆冷风险：</strong>世界杯淘汰赛单场决胜，冷门概率高于小组赛。强队可能因为心态、伤病、战术等因素翻车。</li>
+          <li><strong>美国淘汰赛魔咒：</strong>美国队在世界杯淘汰赛中表现一直不佳，近几届世界杯都未能走得更远，年轻球员的大赛经验不足。</li>
+          <li><strong>波黑定位球威胁：</strong>波黑有哲科这个高点，定位球抢点威胁大。美国防守定位球能力一般，可能因此丢球。</li>
+          <li><strong>盘口升盘诱盘风险：</strong>盘口从半球升到一球/球半，可能是机构真实看好，也可能是利用东道主热度诱盘，需要警惕。</li>
+          <li><strong>哲科个人能力：</strong>40岁的哲科经验丰富，大赛发挥稳定，可能在关键时刻挺身而出，改变比赛走向。</li>
+          <li><strong>美国轮换影响：</strong>末轮美国轮换阵容输球，主力球员休息了，但比赛状态可能需要时间找回。</li>
+          <li><strong>裁判因素：</strong>东道主可能在判罚上略有优势，但也可能因为压力大而发挥失常。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 免责声明 -->
+  <section>
+    <h2>免责声明</h2>
+    <div class="module-body">
+      <div class="disclaimer">
+        <p><strong>【重要声明】</strong>本分析报告仅供参考，不构成任何投注建议或投资指导。足球比赛存在较大的偶然性和不确定性，实际赛果可能与分析预测存在较大差异。</p>
+        <p>本报告基于公开数据和信息进行分析，数据来源包括但不限于FIFA官网、百度体育、懂球帝、直播吧、新浪体育等。由于数据可能存在延迟或误差，分析结果仅供参考。</p>
+        <p>请理性看待足球比赛，享受足球乐趣，切勿沉迷赌博。未成年人禁止参与任何形式的赌博活动。</p>
+        <p>本报告所有分析均为AI自动生成，不代表任何官方立场。据此操作，风险自担。</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

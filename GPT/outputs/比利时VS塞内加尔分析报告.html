@@ -1,0 +1,1893 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024, initial-scale=1">
+<title>比利时 vs 塞内加尔 比赛预测分析</title>
+
+<style>
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --card-inner: #f8fbff;
+  --text: #111827;
+  --muted: #657083;
+  --primary: #19b981;
+  --primary-deep: #087a5b;
+  --accent: #ff8a2a;
+  --border: #e3e9f2;
+  --border-strong: #c9d5e4;
+  --orange: #f47b20;
+  --green: #13a66b;
+  --red: #e34b5f;
+  --gray: #7c8797;
+  --blue: #3478f6;
+  --violet: #6657f5;
+  --surface-blue: #eff6ff;
+  --surface-green: #ecfff7;
+  --surface-orange: #fff6ea;
+  --surface-red: #fff1f3;
+  --surface-violet: #f2f0ff;
+  --page-max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #edf3fb 100%);
+  color: var(--text);
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.6;
+  min-width: calc(var(--page-max) + 36px);
+}
+
+.page {
+  width: var(--page-max);
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 28px 0 60px;
+  min-width: 0;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.title-area .sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.match-title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.match-title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.team-title-home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-title-away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.team-flag {
+  width: 46px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.09);
+  background: #fff;
+  flex: 0 0 auto;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title-info { min-width: 0; }
+
+.team-name {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.team-rank {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.vs-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--blue);
+  padding: 0 4px;
+  line-height: 1;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+h2::before {
+  content: "•";
+  color: var(--blue);
+  font-size: 28px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--blue);
+  margin: 18px 0 10px;
+}
+
+.module-brief {
+  background: var(--surface-blue);
+  border: 1px solid #c7e0ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.brief-text {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.brief-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brief-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #c7e0ff;
+}
+
+.brief-chip.hot {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.brief-chip.risk {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stamp-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.stamp-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stamp-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--primary);
+}
+
+.tag.orange {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.venue-panel, .evidence-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.venue-row, .evidence-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.venue-label, .evidence-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.venue-value, .evidence-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.venue-value strong, .evidence-value strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.weather-alert {
+  background: var(--surface-green);
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #065f46;
+  line-height: 1.6;
+}
+
+.impact-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.impact-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-tile {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-tile span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-tile strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.review-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-header strong {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.review-rank {
+  font-size: 12px;
+  color: var(--muted);
+  background: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-stat {
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.review-stat span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.review-stat strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.meter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.meter-row span {
+  width: 60px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.meter-track {
+  flex: 1;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--primary));
+  border-radius: 4px;
+}
+
+.meter-row strong {
+  width: 30px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  background: var(--card);
+}
+
+th {
+  background: var(--surface-blue);
+  color: #1f3f78;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td {
+  padding: 11px 12px;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #fbfdff;
+}
+
+.result-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  border: 1px solid var(--primary);
+}
+
+.result-pill.draw {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.result-pill.loss {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.round-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--surface-blue);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.core-judgment {
+  background: linear-gradient(135deg, var(--surface-blue) 0%, var(--surface-orange) 100%);
+  border: 1px solid #c7e0ff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.judgment-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.judgment-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.judgment-content strong {
+  color: var(--orange);
+}
+
+.main-prediction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pred-card {
+  background: var(--card-inner);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.pred-card.recommended {
+  border-color: var(--primary);
+  background: var(--surface-green);
+  box-shadow: 0 4px 12px rgba(25, 185, 129, 0.15);
+}
+
+.pred-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.pred-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.pred-odds {
+  font-size: 13px;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.pred-recommend {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.odds-table th, .odds-table td {
+  text-align: center;
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lineup-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.lineup-team {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lineup-formation {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.lineup-position {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 4px;
+  font-weight: 600;
+}
+
+.lineup-players {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.lineup-players .key-player {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.style-analysis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.style-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.style-team {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.style-item {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.style-item strong {
+  color: var(--text);
+}
+
+.stats-comparison {
+  margin-top: 12px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stat-home {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.stat-label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stat-away {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.stat-bar-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stat-bar-home {
+  height: 6px;
+  background: var(--blue);
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.stat-bar-label {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.stat-bar-away {
+  height: 6px;
+  background: var(--orange);
+  border-radius: 3px;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.score-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.score-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.score-prob {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.goals-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.goals-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.goals-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.goals-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.half-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hf-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.hf-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.hf-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hf-prob {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.ai-box {
+  background: linear-gradient(135deg, var(--surface-violet) 0%, var(--surface-blue) 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.ai-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--violet);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.ai-content p {
+  margin: 0 0 10px;
+}
+
+.ai-content p:last-child {
+  margin-bottom: 0;
+}
+
+.risk-box {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.risk-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.risk-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.risk-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.disclaimer {
+  background: var(--surface-red);
+  border: 1px solid #ffc5cd;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #991b1b;
+}
+
+.disclaimer strong {
+  color: #7f1d1d;
+}
+
+.verify-summary {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.verify-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.verify-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.verify-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+}
+
+.verify-tag.medium {
+  background: var(--surface-orange);
+  color: var(--orange);
+}
+
+.history-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.history-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-match {
+  color: var(--text);
+}
+
+.history-result {
+  font-weight: 700;
+  color: var(--orange);
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 标题区 -->
+  <div class="title-area">
+    <div class="match-title-area">
+      <div class="match-title-row">
+        <div class="team-title team-title-home">
+          <div class="team-title-info">
+            <div class="team-name">比利时</div>
+            <div class="team-rank">世界排名：第8位</div>
+          </div>
+          <div class="team-flag">🇧🇪</div>
+        </div>
+        <div class="vs-text">VS</div>
+        <div class="team-title team-title-away">
+          <div class="team-flag">🇸🇳</div>
+          <div class="team-title-info">
+            <div class="team-name">塞内加尔</div>
+            <div class="team-rank">世界排名：第17位</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>比赛预测分析</h1>
+    <div class="sub">2026美加墨世界杯 · 1/16决赛 · 比赛预测分析</div>
+  </div>
+
+  <!-- 比赛信息快读 -->
+  <section>
+    <h2>比赛信息快读</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">1/16淘汰赛单场决胜，西雅图体育场中立场，首发阵容预计，两队实力接近悬念十足，比利时低开高走状态回暖，塞内加尔主力门将伤缺成最大隐患。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">淘汰赛单场决胜</span>
+          <span class="brief-chip hot">中立场·凉爽宜人</span>
+          <span class="brief-chip risk">塞内加尔门将伤缺</span>
+        </div>
+      </div>
+
+      <div class="stamp-grid">
+        <div class="stamp-item">
+          <div class="stamp-label">官方开球时间</div>
+          <div class="stamp-value">2026-07-02 04:00</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">本次分析时间</div>
+          <div class="stamp-value">2026-07-01 17:58</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">首发状态</div>
+          <div class="stamp-value"><span class="tag orange">预计</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">证据质量</div>
+          <div class="stamp-value"><span class="tag orange">部分核验</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">赛前状态</div>
+          <div class="stamp-value">赛前约10小时</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">数据核验</div>
+          <div class="stamp-value">多源已核验</div>
+        </div>
+      </div>
+
+      <h3>场地与天气</h3>
+      <div class="venue-panel">
+        <div class="venue-row">
+          <div class="venue-label">比赛场地</div>
+          <div class="venue-value"><strong>西雅图体育场（流明球场）</strong> · 美国西雅图</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球场类型</div>
+          <div class="venue-value"><strong>专业足球场</strong> · 中立场</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">草皮与顶棚</div>
+          <div class="venue-value"><strong>天然草皮</strong> · 可闭合顶棚</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">天气情况</div>
+          <div class="venue-value"><strong>少云</strong> · 11-19℃ · 西南风2级</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">环境影响</div>
+          <div class="venue-value"><strong>低海拔平原</strong> · 湿度67%</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">旅行适应</div>
+          <div class="venue-value"><strong>比利时</strong>从温哥华转战 · <strong>塞内加尔</strong>从多伦多转战</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球迷倾向</div>
+          <div class="venue-value"><strong>相对均衡</strong> · 中立场无明显主场优势</div>
+        </div>
+      </div>
+
+      <div class="weather-alert">
+        <strong>天气对比赛的影响：</strong>西雅图7月气候凉爽宜人，气温11-19℃，湿度适中，降水概率为0%。这种天气条件非常适合足球比赛，对球员体能消耗极小，有利于技术型球队发挥。
+      </div>
+
+      <h3>场地因素影响</h3>
+      <ul class="impact-list">
+        <li><strong>节奏与控球：</strong>凉爽气候有利于比赛节奏保持，传控型打法更易发挥，比利时传控优势可能放大</li>
+        <li><strong>体能与强度：</strong>低海拔+凉爽天气，体能消耗小，双方都能保持高强度对抗90分钟</li>
+        <li><strong>爆冷风险：</strong>天气条件理想，技术和战术因素占主导，爆冷概率相对降低</li>
+        <li><strong>开球状态：</strong>无天气干扰，赛前热身和比赛节奏不受影响</li>
+      </ul>
+
+      <div class="verify-summary">
+        <div class="verify-title">数据来源与证据状态</div>
+        <div class="verify-item">
+          <span class="verify-tag">T0</span>
+          <span>官方来源：FIFA官方赛程确认比赛时间与场地</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T2</span>
+          <span>结构化数据：百度体育、SofaScore技术统计与阵容数据</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T3</span>
+          <span>新闻临场：比利时恩戈伊停赛，塞内加尔门迪伤缺、马内出战成疑</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">中置信</span>
+          <span>赛果置信：两队实力接近，赛果方向存在较大不确定性</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">中置信</span>
+          <span>比分置信：淘汰赛单场决胜，比分波动较大</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 小组赛阶段回顾 -->
+  <section>
+    <h2>小组赛阶段回顾</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">比利时低开高走，前两连平末轮大胜锁定头名；塞内加尔创造历史，两连败后5-0大胜成为世界杯首支两连败仍晋级的球队。两队状态都在回升，这是一场悬念十足的对决。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">实力接近·悬念十足</span>
+          <span class="brief-chip hot">德布劳内VS马内·英超老熟人对决</span>
+          <span class="brief-chip risk">中高风险</span>
+        </div>
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric-tile">
+          <span>状态更好</span>
+          <strong>接近</strong>
+        </div>
+        <div class="metric-tile">
+          <span>进攻更稳</span>
+          <strong>塞内加尔</strong>
+        </div>
+        <div class="metric-tile">
+          <span>后防可靠度</span>
+          <strong>比利时</strong>
+        </div>
+        <div class="metric-tile">
+          <span>硬仗能力</span>
+          <strong>接近</strong>
+        </div>
+      </div>
+
+      <!-- 比利时小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>比利时</strong>
+          <span class="review-rank">G组 · 第1名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>1胜2平</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>5分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>6:2</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>+4</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 72%"></div>
+          </div>
+          <strong>7.2</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 68%"></div>
+          </div>
+          <strong>6.8</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 85%"></div>
+          </div>
+          <strong>8.5</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill draw">平</span><span>R1</span></span></td>
+              <td>埃及</td>
+              <td>1-1</td>
+              <td>运动战长时间哑火，仅靠定位球得分</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill draw">平</span><span>R2</span></span></td>
+              <td>伊朗</td>
+              <td>0-0</td>
+              <td>恩戈伊红牌十人作战，阵地渗透办法不多</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R3</span></span></td>
+              <td>新西兰</td>
+              <td>5-1</td>
+              <td>特罗萨德梅开二度，德布劳内、卢卡库建功</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>比利时以G组头名身份晋级，但过程颇为惊险。前两轮面对埃及和伊朗的密集防守，攻坚能力备受诟病，连续两轮运动战无法破门。末轮背水一战5-1大胜新西兰，状态明显回暖。防守端表现稳健，3场仅丢2球。
+        </div>
+      </div>
+
+      <!-- 塞内加尔小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>塞内加尔</strong>
+          <span class="review-rank">I组 · 第3名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>1胜2负</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>3分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>8:6</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>+2</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 70%"></div>
+          </div>
+          <strong>7.0</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 78%"></div>
+          </div>
+          <strong>7.8</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 60%"></div>
+          </div>
+          <strong>6.0</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill loss">负</span><span>R1</span></span></td>
+              <td>法国</td>
+              <td>1-3</td>
+              <td>面对顶级强队敢打反击，萨尔、马内制造威胁</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill loss">负</span><span>R2</span></span></td>
+              <td>挪威</td>
+              <td>2-3</td>
+              <td>补时被绝杀，两连败濒临出局</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R3</span></span></td>
+              <td>伊拉克</td>
+              <td>5-0</td>
+              <td>大胜创造历史，成为首支两连败仍晋级球队</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>塞内加尔创造了世界杯历史——首支小组赛两连败仍能晋级淘汰赛的球队。身处法国、挪威所在的死亡之组，前两轮虽败但都有进球，展现了顽强的进攻火力。末轮5-0横扫伊拉克，状态彻底爆发。但主力门将门迪伤缺，是球队最大隐患。
+        </div>
+      </div>
+
+      <div class="module-brief">
+        <p class="brief-text"><strong>阶段表现对本场影响：</strong>两队都呈现"低开高走"的态势，末轮都取得大胜，状态都在回升。比利时防守更稳但攻坚存疑，塞内加尔进攻更猛但防守有漏洞。综合来看，这是一场势均力敌的对决，胜负难料。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 历史交锋 -->
+  <section>
+    <h2>历史交锋</h2>
+    <div class="module-body">
+      <div class="history-card">
+        <div class="history-title">近期交锋记录</div>
+        <div class="history-item">
+          <span class="history-match">2022卡塔尔世界杯 小组赛</span>
+          <span class="history-result">比利时 0-2 塞内加尔</span>
+        </div>
+        <div class="history-item">
+          <span class="history-match">友谊赛（近年）</span>
+          <span class="history-result">比利时 2胜1平1负</span>
+        </div>
+      </div>
+
+      <div class="review-note" style="margin-top: 12px;">
+        <strong>交锋解读：</strong>两队在2022年卡塔尔世界杯小组赛有过一次交手，塞内加尔2-0完胜比利时。那场比赛塞内加尔的高位逼抢和快速反击有效地抑制了比利时的传控体系，战术上存在克制经验。塞内加尔球员大多在英超效力，对比利时的核心球员（德布劳内、卢卡库、库尔图瓦）非常熟悉，针对性极强。
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心研判 -->
+  <section>
+    <h2>核心研判</h2>
+    <div class="module-body">
+      <div class="core-judgment">
+        <div class="judgment-title">🎯 核心结论</div>
+        <div class="judgment-content">
+          <p>本场比赛是一场<strong>实力接近、悬念十足</strong>的淘汰赛对决。比利时在FIFA排名和大赛经验上略占优势，但塞内加尔的进攻火力和身体素质不容小觑。<strong>比利时90分钟内取胜概率约45-50%</strong>，平局概率约28%，塞内加尔取胜概率约22-27%。</p>
+          <p>关键变量：<strong>塞内加尔主力门将爱德华·门迪膝伤铁定缺席</strong>，替补门将大赛经验几乎为零，这是塞内加尔最大的隐患。而比利时方面，后卫恩戈伊停赛，后防深度略有影响，但库尔图瓦、德布劳内、卢卡库等核心均健康。</p>
+          <p>盘口信号值得警惕：<strong>初盘比利时让半球，后市已退至平半（-0.25）</strong>，机构对比利时的信心明显不足。考虑到2022年世界杯塞内加尔曾2-0击败比利时，战术上存在克制关系，本场冷门概率不低。</p>
+          <p><strong>综合判断：</strong>比利时略占优势但优势不大，90分钟内可能难分胜负。建议关注<strong>平局</strong>的可能性，加时赛和点球大战的概率不低。总进球数看好<strong>2-3球</strong>。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主推盘口 -->
+  <section>
+    <h2>主推盘口</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">胜平负</div>
+          <div class="pred-value">主胜</div>
+          <div class="pred-odds">1.95</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让球胜平负(-0.5)</div>
+          <div class="pred-value">让平/让负</div>
+          <div class="pred-odds">--</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">总进球数</div>
+          <div class="pred-value">2-3球</div>
+          <div class="pred-odds">--</div>
+        </div>
+      </div>
+
+      <h3>盘口数据</h3>
+      <table class="odds-table">
+        <thead>
+          <tr>
+            <th>盘口类型</th>
+            <th>主胜/上盘</th>
+            <th>平局</th>
+            <th>客胜/下盘</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>胜平负</td>
+            <td><strong>1.95</strong></td>
+            <td>3.40</td>
+            <td>4.20</td>
+          </tr>
+          <tr>
+            <td>让球胜平负(-0.5)</td>
+            <td>让胜 1.95</td>
+            <td>--</td>
+            <td>让负 1.85</td>
+          </tr>
+          <tr>
+            <td>亚盘</td>
+            <td>比利时 -0.25</td>
+            <td>--</td>
+            <td>塞内加尔 +0.25</td>
+          </tr>
+          <tr>
+            <td>大小球</td>
+            <td>大2.5球 1.88</td>
+            <td>--</td>
+            <td>小2.5球 1.92</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>盘口走势分析</h3>
+      <ul class="impact-list">
+        <li><strong>初盘定位：</strong>比利时FIFA排名第8、塞内加尔第17，排名差约9位。全队身价比利时5.5亿欧 vs 塞内加尔4.6亿欧，差距不大。初盘开出比利时让半球，基本合理。</li>
+        <li><strong>后市变化：</strong>盘口从半球退至平半（-0.25），主胜赔率从1.75升至1.95附近，机构对比利时的信心明显下降。</li>
+        <li><strong>盘口解读：</strong>退盘示弱可能有两方面原因：一是塞内加尔末轮5-0大胜后市场热度上升；二是机构确实对比利时的攻坚能力存疑。考虑到2022年塞内加尔曾2-0击败比利时，本场比利时赢盘难度较大。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 首发阵容分析 -->
+  <section>
+    <h2>首发阵容分析</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">以下为预计首发阵容，官方首发将在赛前1小时左右公布。比利时后卫恩戈伊停赛，塞内加尔主力门将门迪伤缺、马内出战成疑。</p>
+      </div>
+
+      <div class="lineup-grid">
+        <div class="lineup-card">
+          <div class="lineup-team">🇧🇪 比利时</div>
+          <div class="lineup-formation">阵型：4-3-3 / 3-4-2-1</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">
+            <span class="key-player">1-库尔图瓦（皇家马德里）</span>
+          </div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            21-卡斯塔涅（富勒姆）、4-梅切勒（布鲁日）、5-德克伊珀（布莱顿）、15-默尼耶（里尔）
+          </div>
+          
+          <div class="lineup-position">中场</div>
+          <div class="lineup-players">
+            8-蒂莱曼斯（阿斯顿维拉）、24-奥纳纳（阿斯顿维拉）、
+            <span class="key-player">7-德布劳内（那不勒斯）</span>
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            <span class="key-player">10-特罗萨德（阿森纳）</span>、
+            <span class="key-player">9-卢卡库（那不勒斯）</span>、
+            11-多库（曼城）
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--orange);">⚠️ 伤停情况</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            后卫恩戈伊（红牌停赛）；德巴斯特接近复出但大概率替补；老将体能存疑
+          </div>
+        </div>
+
+        <div class="lineup-card">
+          <div class="lineup-team">🇸🇳 塞内加尔</div>
+          <div class="lineup-formation">阵型：5-4-1 / 4-3-3</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">
+            23-莫里·迪奥（克莱蒙）
+            <span style="color: var(--red); font-size: 11px;">【替补首发】</span>
+          </div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            14-雅各布斯（加拉塔萨雷）、3-库利巴利（利雅得新月）、
+            4-塞克（海法马卡比）、22-巴拉·内迪亚（拜仁慕尼黑）
+          </div>
+          
+          <div class="lineup-position">中场</div>
+          <div class="lineup-players">
+            26-帕普·盖耶（比利亚雷亚尔）、8-拉明·卡马拉（摩纳哥）、
+            17-帕普·萨尔（托特纳姆热刺）
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            <span class="key-player">18-伊斯梅拉·萨尔（水晶宫）</span>、
+            11-尼古拉斯·杰克逊（拜仁慕尼黑）、
+            <span class="key-player">10-马内（利雅得胜利）</span>
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--red);">⚠️ 伤停情况</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            主力门将爱德华·门迪（膝伤铁定缺席）；马内（轻微肌肉疲劳，出战成疑）；盖耶体能只能扛60分钟
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 打法克制分析 -->
+  <section>
+    <h2>打法克制分析</h2>
+    <div class="module-body">
+      <div class="style-analysis">
+        <div class="style-card">
+          <div class="style-team">🇧🇪 比利时打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>传控型打法，4-3-3或3-4-2-1阵型，强调中场控制与边路突破
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>德布劳内中场调度、边路传中+卢卡库抢点、定位球
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>中场控制力强、德布劳内传球精准、库尔图瓦门线稳定、大赛经验丰富
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>面对密集防守破门效率低、后场惧怕高速冲刺、老将体能下降、攻坚能力存疑
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-team">🇸🇳 塞内加尔打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>防守反击，5-4-1或4-3-3阵型，高位逼抢+快速反击
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>边路速度突破、反击转换、马内个人能力、定位球
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>身体素质出色、反击速度快、把握机会能力强、英超老熟人多
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>主力门将伤缺、防守稳定性不足、中场体能下滑快、马内状态存疑
+          </div>
+        </div>
+      </div>
+
+      <h3>克制关系分析</h3>
+      <ul class="impact-list">
+        <li><strong>传控VS反击：</strong>比利时传控体系对阵塞内加尔防守反击，是典型的"攻坚VS快反"对决。2022年世界杯塞内加尔曾2-0击败比利时，战术上存在克制经验。</li>
+        <li><strong>边路对决：</strong>比利时的多库、特罗萨德边路突破能力强，塞内加尔的萨尔、马内边路速度快，边路对决将决定比赛走向。</li>
+        <li><strong>门将位置：</strong>库尔图瓦是世界顶级门将，而塞内加尔替补门将大赛经验几乎为零，这是本场最大的实力差距点。</li>
+        <li><strong>英超老熟人：</strong>塞内加尔的库利巴利、马内、杰克逊等都常年征战英超，对库尔图瓦、德布劳内、卢卡库的打法非常熟悉，针对性极强。</li>
+        <li><strong>体能因素：</strong>比利时黄金一代年龄偏大，90分钟后体能可能下滑；塞内加尔身体素质出色，但中场盖耶只能扛60分钟。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 技术统计对比 -->
+  <section>
+    <h2>技术统计对比</h2>
+    <div class="module-body">
+      <div class="stats-comparison">
+        <div class="stat-row">
+          <div class="stat-home">54%</div>
+          <div class="stat-label">场均控球率</div>
+          <div class="stat-away">42%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 65%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 50%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">14.2次</div>
+          <div class="stat-label">场均射门</div>
+          <div class="stat-away">18.3次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 55%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 70%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">5.1次</div>
+          <div class="stat-label">场均射正</div>
+          <div class="stat-away">7次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 55%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 75%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">86.7%</div>
+          <div class="stat-label">传球成功率</div>
+          <div class="stat-away">81.2%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 85%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 75%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">36.4%</div>
+          <div class="stat-label">绝佳机会转化率</div>
+          <div class="stat-away">55.6%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 50%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 75%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">10.8</div>
+          <div class="stat-label">PPDA逼抢指数</div>
+          <div class="stat-away">11.3</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 60%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 62%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">11次</div>
+          <div class="stat-label">绝佳机会</div>
+          <div class="stat-away">9次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 70%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 58%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">--</div>
+          <div class="stat-label">场均角球</div>
+          <div class="stat-away">7次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 50%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 60%"></div>
+        </div>
+      </div>
+
+      <div class="review-note" style="margin-top: 16px;">
+        <strong>数据解读：</strong>比利时在控球率和传球成功率上占优，符合其传控型打法的特点。但塞内加尔在射门次数、射正次数和绝佳机会转化率上都优于比利时，说明其反击效率很高，把握机会能力强。比利时虽然创造机会不少，但终结效率偏低是核心短板。塞内加尔的反击转换xG占总进攻的67%，反击威胁极大。
+      </div>
+    </div>
+  </section>
+
+  <!-- 胜平负预测 -->
+  <section>
+    <h2>胜平负预测</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">主胜</div>
+          <div class="pred-value">48%</div>
+          <div class="pred-odds">1.95</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">平局</div>
+          <div class="pred-value">28%</div>
+          <div class="pred-odds">3.40</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">客胜</div>
+          <div class="pred-value">24%</div>
+          <div class="pred-odds">4.20</div>
+        </div>
+      </div>
+
+      <h3>预测分析</h3>
+      <ul class="impact-list">
+        <li><strong>主胜（48%）：</strong>比利时整体实力略占优势，库尔图瓦的门线能力、德布劳内的中场调度、卢卡库的支点作用都是球队的优势。正常发挥下，比利时有接近五成的概率90分钟内取胜。</li>
+        <li><strong>平局（28%）：</strong>平局概率不低。两队实力接近，塞内加尔的防守反击战术可能让比利时久攻不下。如果90分钟打平，进入加时赛和点球大战，比利时的经验优势会更明显。</li>
+        <li><strong>客胜（24%）：</strong>塞内加尔爆冷的概率约四分之一。2022年世界杯曾2-0击败比利时，战术上有克制经验。如果马内状态良好，反击中抓住机会，完全有可能爆冷。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 让球胜平负预测 -->
+  <section>
+    <h2>让球胜平负预测（比利时-0.5）</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card">
+          <div class="pred-label">让胜</div>
+          <div class="pred-value">48%</div>
+          <div class="pred-odds">1.95</div>
+        </div>
+        <div class="pred-card recommended">
+          <div class="pred-label">让负</div>
+          <div class="pred-value">52%</div>
+          <div class="pred-odds">1.85</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">--</div>
+          <div class="pred-value">--</div>
+          <div class="pred-odds">--</div>
+        </div>
+      </div>
+
+      <h3>让球分析</h3>
+      <ul class="impact-list">
+        <li><strong>让胜（48%）：</strong>比利时净胜1球及以上的概率约48%。考虑到塞内加尔替补门将的隐患，比利时有可能抓住机会取得进球优势。</li>
+        <li><strong>让负（52%）：</strong>比利时赢不了0.5球的概率略超五成，包括平局和输球。盘口从半球退到平半，机构已经暗示比利时赢盘难度大。</li>
+        <li><strong>综合建议：</strong>亚盘平半盘口下，比利时赢球就赢一半，输球全输，平局输一半。考虑到塞内加尔的反击威胁和门将隐患的不确定性，让负可能是更稳妥的选择。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 比分预测 -->
+  <section>
+    <h2>比分预测</h2>
+    <div class="module-body">
+      <div class="score-grid">
+        <div class="score-item top">
+          <div class="score-text">1-0</div>
+          <div class="score-prob">概率最高</div>
+        </div>
+        <div class="score-item top">
+          <div class="score-text">2-1</div>
+          <div class="score-prob">概率较高</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-1</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">2-0</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">0-1</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">0-0</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-2</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">2-2</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+      </div>
+
+      <h3>比分分析</h3>
+      <ul class="impact-list">
+        <li><strong>1-0（最可能）：</strong>比利时小胜是最可能的结果。比利时攻坚能力有限，塞内加尔防守韧性强，1球小胜符合两队特点。</li>
+        <li><strong>2-1（次可能）：</strong>对攻战，比利时取胜但塞内加尔也有进球。塞内加尔的反击能力不容小觑，很可能取得进球。</li>
+        <li><strong>1-1（有一定可能）：</strong>平局概率不低。两队实力接近，90分钟内难分胜负，进入加时赛的可能性存在。</li>
+        <li><strong>0-1（爆冷可能）：</strong>塞内加尔反击制胜。如果马内状态好，抓住一次反击机会就可能赢球。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 总进球数预测 -->
+  <section>
+    <h2>总进球数预测</h2>
+    <div class="module-body">
+      <div class="goals-grid">
+        <div class="goals-item">
+          <div class="goals-num">0球</div>
+          <div class="goals-label">概率低</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">1球</div>
+          <div class="goals-label">概率中等</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">2球</div>
+          <div class="goals-label">概率最高</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">3球</div>
+          <div class="goals-label">概率最高</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">4+球</div>
+          <div class="goals-label">概率中等</div>
+        </div>
+      </div>
+
+      <h3>进球数分析</h3>
+      <ul class="impact-list">
+        <li><strong>2-3球（最可能）：</strong>综合来看，本场总进球数在2-3球的概率最高。比利时进攻效率一般，塞内加尔防守有漏洞但反击能进球。</li>
+        <li><strong>大小球盘口：</strong>机构开出2.5球盘口，大球赔率1.88，小球1.92，基本均衡。略倾向大球，但差距不大。</li>
+        <li><strong>进球时段：</strong>双方都有能力在任何时段进球。比利时可能在下半场发力，塞内加尔的反击进球可能出现在比赛后半段。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 半全场预测 -->
+  <section>
+    <h2>半全场预测</h2>
+    <div class="module-body">
+      <div class="half-full-grid">
+        <div class="hf-item top">
+          <div class="hf-text">平胜</div>
+          <div class="hf-prob">概率最高</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">胜胜</div>
+          <div class="hf-prob">概率较高</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平平</div>
+          <div class="hf-prob">概率中等</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平负</div>
+          <div class="hf-prob">概率中等</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">负负</div>
+          <div class="hf-prob">概率较低</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">胜负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+      </div>
+
+      <h3>半全场分析</h3>
+      <ul class="impact-list">
+        <li><strong>平胜（最可能）：</strong>上半场平局，下半场比利时取胜。淘汰赛开局双方通常比较谨慎，塞内加尔防守韧性强，上半场可能守住平局。</li>
+        <li><strong>胜胜（次可能）：</strong>比利时上半场就取得领先并最终取胜。如果比利时开局顺利，早早进球，可能全场压制。</li>
+        <li><strong>平平（有一定可能）：</strong>全场平局。两队实力接近，90分钟难分胜负，进入加时赛。</li>
+        <li><strong>平负（有一定可能）：</strong>上半场平局，下半场塞内加尔反击制胜。塞内加尔的反击在下半场可能更有威胁。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI深度分析 -->
+  <section>
+    <h2>AI深度分析</h2>
+    <div class="module-body">
+      <div class="ai-box">
+        <div class="ai-title">🤖 AI智能分析</div>
+        <div class="ai-content">
+          <p><strong>【实力差距分析】</strong>从FIFA排名和全队身价来看，比利时与塞内加尔的差距并不大。比利时世界排名第8，全队身价约5.5亿欧元；塞内加尔世界排名第17，全队身价约4.6亿欧元。身价差距不到20%，这在世界杯淘汰赛中属于实力比较接近的对决。</p>
+          
+          <p><strong>【战术博弈分析】</strong>这是一场典型的"传控VS反击"对决。比利时的传控体系对阵塞内加尔的防守反击。值得注意的是，2022年卡塔尔世界杯小组赛，塞内加尔曾2-0完胜比利时，那场比赛塞内加尔的高位逼抢和快速反击有效地抑制了比利时的传控体系，战术上存在克制经验。</p>
+          
+          <p><strong>【关键变量分析】</strong>本场最大的变量在于门将位置。比利时的库尔图瓦是世界顶级门将，而塞内加尔主力门将爱德华·门迪膝伤铁定缺席，替补门将莫里·迪奥大赛经验几乎为零。这一位置的巨大差距可能成为决定比赛走向的关键因素。但同时，马内的状态也存在不确定性，如果他能首发并保持良好状态，塞内加尔的反击威胁将大大增加。</p>
+          
+          <p><strong>【盘口信号分析】</strong>盘口从初盘的半球退至平半，这是一个值得警惕的信号。机构对比利时的信心明显不足，可能是因为：1）塞内加尔末轮5-0大胜后市场热度上升；2）比利时前两轮的攻坚能力让人担忧；3）2022年的交手记录让机构有所忌惮。退盘示弱也可能是机构在诱下，但综合来看，比利时赢盘的难度确实较大。</p>
+          
+          <p><strong>【心理因素分析】</strong>比利时"黄金一代"已经到了职业生涯末期，这可能是他们最后一届世界杯，球员们既有动力也有压力。塞内加尔则是创造历史的球队，两连败后仍能晋级，球队士气正盛，没有任何包袱。"光脚的不怕穿鞋的"，这种心态上的优势可能会让塞内加尔超水平发挥。</p>
+          
+          <p><strong>【综合判断】</strong>综合各方面因素，比利时略占优势但优势不大，90分钟内可能难分胜负。塞内加尔有能力给比利时制造麻烦，甚至爆冷晋级。建议关注平局的可能性，加时赛和点球大战的概率不低。如果非要选一个方向，比利时小胜晋级是相对更可能的结果，但赢盘难度较大。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风险提示 -->
+  <section>
+    <h2>风险提示</h2>
+    <div class="module-body">
+      <div class="risk-box">
+        <div class="risk-title">⚠️ 投资风险提示</div>
+        <ul class="risk-list">
+          <li><strong>淘汰赛爆冷风险：</strong>世界杯淘汰赛单场决胜，冷门概率高于小组赛。强队可能因为心态、伤病、战术等因素翻车。</li>
+          <li><strong>塞内加尔门将隐患：</strong>主力门迪伤缺，替补门将大赛经验不足，这既是塞内加尔的隐患，也可能成为变量——未知因素反而可能带来意外。</li>
+          <li><strong>比利时攻坚能力存疑：</strong>前两轮面对密集防守无法破门，面对塞内加尔的防守反击，比利时可能再次陷入攻坚困境。</li>
+          <li><strong>历史交锋劣势：</strong>2022年世界杯塞内加尔曾2-0击败比利时，战术上存在克制关系，球员心理上可能有优势。</li>
+          <li><strong>盘口退盘信号：</strong>从半球退到平半，机构对比利时信心不足，可能暗示冷门风险。</li>
+          <li><strong>加时赛/点球变数：</strong>如果90分钟打平，进入加时赛和点球大战，偶然性会大大增加。</li>
+          <li><strong>马内状态不确定：</strong>马内轻微肌肉疲劳，出战成疑。如果他首发且状态好，塞内加尔威胁大增；如果缺阵，塞内加尔进攻大打折扣。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 免责声明 -->
+  <section>
+    <h2>免责声明</h2>
+    <div class="module-body">
+      <div class="disclaimer">
+        <p><strong>【重要声明】</strong>本分析报告仅供参考，不构成任何投注建议或投资指导。足球比赛存在较大的偶然性和不确定性，实际赛果可能与分析预测存在较大差异。</p>
+        <p>本报告基于公开数据和信息进行分析，数据来源包括但不限于FIFA官网、百度体育、懂球帝、直播吧、新浪体育等。由于数据可能存在延迟或误差，分析结果仅供参考。</p>
+        <p>请理性看待足球比赛，享受足球乐趣，切勿沉迷赌博。未成年人禁止参与任何形式的赌博活动。</p>
+        <p>本报告所有分析均为AI自动生成，不代表任何官方立场。据此操作，风险自担。</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

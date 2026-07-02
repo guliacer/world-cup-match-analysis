@@ -1,0 +1,1825 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024, initial-scale=1">
+<title>英格兰 vs 刚果(金) 比赛预测分析</title>
+
+<style>
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --card-inner: #f8fbff;
+  --text: #111827;
+  --muted: #657083;
+  --primary: #19b981;
+  --primary-deep: #087a5b;
+  --accent: #ff8a2a;
+  --border: #e3e9f2;
+  --border-strong: #c9d5e4;
+  --orange: #f47b20;
+  --green: #13a66b;
+  --red: #e34b5f;
+  --gray: #7c8797;
+  --blue: #3478f6;
+  --violet: #6657f5;
+  --surface-blue: #eff6ff;
+  --surface-green: #ecfff7;
+  --surface-orange: #fff6ea;
+  --surface-red: #fff1f3;
+  --surface-violet: #f2f0ff;
+  --page-max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #edf3fb 100%);
+  color: var(--text);
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.6;
+  min-width: calc(var(--page-max) + 36px);
+}
+
+.page {
+  width: var(--page-max);
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 28px 0 60px;
+  min-width: 0;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.title-area .sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.match-title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.match-title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.team-title-home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-title-away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.team-flag {
+  width: 46px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.09);
+  background: #fff;
+  flex: 0 0 auto;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title-info { min-width: 0; }
+
+.team-name {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.team-rank {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.vs-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--blue);
+  padding: 0 4px;
+  line-height: 1;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+h2::before {
+  content: "•";
+  color: var(--blue);
+  font-size: 28px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--blue);
+  margin: 18px 0 10px;
+}
+
+.module-brief {
+  background: var(--surface-blue);
+  border: 1px solid #c7e0ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.brief-text {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.brief-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brief-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #c7e0ff;
+}
+
+.brief-chip.hot {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.brief-chip.risk {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stamp-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.stamp-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stamp-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--primary);
+}
+
+.tag.orange {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.venue-panel, .evidence-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.venue-row, .evidence-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.venue-label, .evidence-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.venue-value, .evidence-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.venue-value strong, .evidence-value strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.weather-alert {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+.impact-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.impact-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-tile {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-tile span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-tile strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.review-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-header strong {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.review-rank {
+  font-size: 12px;
+  color: var(--muted);
+  background: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-stat {
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.review-stat span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.review-stat strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.meter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.meter-row span {
+  width: 60px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.meter-track {
+  flex: 1;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--primary));
+  border-radius: 4px;
+}
+
+.meter-row strong {
+  width: 30px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  background: var(--card);
+}
+
+th {
+  background: var(--surface-blue);
+  color: #1f3f78;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td {
+  padding: 11px 12px;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #fbfdff;
+}
+
+.result-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  border: 1px solid var(--primary);
+}
+
+.result-pill.draw {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.result-pill.loss {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.round-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--surface-blue);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.core-judgment {
+  background: linear-gradient(135deg, var(--surface-blue) 0%, var(--surface-green) 100%);
+  border: 1px solid #c7e0ff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.judgment-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.judgment-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.judgment-content strong {
+  color: var(--primary-deep);
+}
+
+.main-prediction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pred-card {
+  background: var(--card-inner);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.pred-card.recommended {
+  border-color: var(--primary);
+  background: var(--surface-green);
+  box-shadow: 0 4px 12px rgba(25, 185, 129, 0.15);
+}
+
+.pred-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.pred-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.pred-odds {
+  font-size: 13px;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.pred-recommend {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.odds-table th, .odds-table td {
+  text-align: center;
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lineup-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.lineup-team {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lineup-formation {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.lineup-position {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 4px;
+  font-weight: 600;
+}
+
+.lineup-players {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.lineup-players .key-player {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.style-analysis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.style-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.style-team {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.style-item {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.style-item strong {
+  color: var(--text);
+}
+
+.stats-comparison {
+  margin-top: 12px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stat-home {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.stat-label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stat-away {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.stat-bar-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stat-bar-home {
+  height: 6px;
+  background: var(--blue);
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.stat-bar-label {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.stat-bar-away {
+  height: 6px;
+  background: var(--orange);
+  border-radius: 3px;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.score-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.score-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.score-prob {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.goals-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.goals-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.goals-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.goals-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.half-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hf-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.hf-item.top {
+  border-color: var(--primary);
+  background: var(--surface-green);
+}
+
+.hf-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hf-prob {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.ai-box {
+  background: linear-gradient(135deg, var(--surface-violet) 0%, var(--surface-blue) 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.ai-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--violet);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.ai-content p {
+  margin: 0 0 10px;
+}
+
+.ai-content p:last-child {
+  margin-bottom: 0;
+}
+
+.risk-box {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.risk-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.risk-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.risk-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.disclaimer {
+  background: var(--surface-red);
+  border: 1px solid #ffc5cd;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #991b1b;
+}
+
+.disclaimer strong {
+  color: #7f1d1d;
+}
+
+.verify-summary {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.verify-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.verify-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.verify-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+}
+
+.verify-tag.medium {
+  background: var(--surface-orange);
+  color: var(--orange);
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 标题区 -->
+  <div class="title-area">
+    <div class="match-title-area">
+      <div class="match-title-row">
+        <div class="team-title team-title-home">
+          <div class="team-title-info">
+            <div class="team-name">英格兰</div>
+            <div class="team-rank">世界排名：第4位</div>
+          </div>
+          <div class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+        </div>
+        <div class="vs-text">VS</div>
+        <div class="team-title team-title-away">
+          <div class="team-flag">🇨🇩</div>
+          <div class="team-title-info">
+            <div class="team-name">刚果(金)</div>
+            <div class="team-rank">世界排名：第53位</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>比赛预测分析</h1>
+    <div class="sub">2026美加墨世界杯 · 1/16决赛 · 比赛预测分析</div>
+  </div>
+
+  <!-- 比赛信息快读 -->
+  <section>
+    <h2>比赛信息快读</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">1/16淘汰赛单场决胜，亚特兰大体育场中立场，首发阵容预计，英格兰实力占优但右路伤病存隐患，刚果(金)防守韧性强且维萨状态火热。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">淘汰赛单场决胜</span>
+          <span class="brief-chip hot">中立场·室内恒温</span>
+          <span class="brief-chip risk">英格兰右路伤病</span>
+        </div>
+      </div>
+
+      <div class="stamp-grid">
+        <div class="stamp-item">
+          <div class="stamp-label">官方开球时间</div>
+          <div class="stamp-value">2026-07-02 00:00</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">本次分析时间</div>
+          <div class="stamp-value">2026-07-01 17:45</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">首发状态</div>
+          <div class="stamp-value"><span class="tag orange">预计</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">证据质量</div>
+          <div class="stamp-value"><span class="tag orange">部分核验</span></div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">赛前状态</div>
+          <div class="stamp-value">赛前24小时</div>
+        </div>
+        <div class="stamp-item">
+          <div class="stamp-label">数据核验</div>
+          <div class="stamp-value">多源已核验</div>
+        </div>
+      </div>
+
+      <h3>场地与天气</h3>
+      <div class="venue-panel">
+        <div class="venue-row">
+          <div class="venue-label">比赛场地</div>
+          <div class="venue-value"><strong>亚特兰大体育场</strong> · 美国亚特兰大</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球场类型</div>
+          <div class="venue-value"><strong>专业足球场</strong> · 中立场</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">草皮与顶棚</div>
+          <div class="venue-value"><strong>天然草皮</strong> · 可闭合顶棚</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">天气情况</div>
+          <div class="venue-value"><strong>局部阵雨</strong> · 25-37℃ · 东南风2级</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">环境影响</div>
+          <div class="venue-value"><strong>海拔302米</strong> · 湿度60%</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">旅行适应</div>
+          <div class="venue-value"><strong>英格兰</strong>从纽约转战 · <strong>刚果(金)</strong>从瓜达拉哈拉转战</div>
+        </div>
+        <div class="venue-row">
+          <div class="venue-label">球迷倾向</div>
+          <div class="venue-value"><strong>英格兰球迷占优</strong> · 主场氛围偏英格兰</div>
+        </div>
+      </div>
+
+      <div class="weather-alert">
+        <strong>天气对比赛的影响：</strong>球场为可闭合顶棚结构，室外降雨不影响比赛进行。室内恒温约24℃，湿度可控，对球员体能和技战术发挥影响较小。
+      </div>
+
+      <h3>场地因素影响</h3>
+      <ul class="impact-list">
+        <li><strong>节奏与控球：</strong>中立场+室内环境，比赛节奏稳定，英格兰控球型打法更易发挥</li>
+        <li><strong>传控与失误：</strong>天然草皮状态良好，室内环境不受天气影响，传控质量有保障</li>
+        <li><strong>体能与强度：</strong>海拔302米影响小，室内恒温24℃，体能消耗可控</li>
+        <li><strong>开球状态：</strong>无延期风险，赛前热身和比赛节奏不受天气干扰</li>
+        <li><strong>爆冷风险：</strong>室内环境稳定，爆冷概率降低，有利于强队正常发挥</li>
+      </ul>
+
+      <div class="verify-summary">
+        <div class="verify-title">数据来源与证据状态</div>
+        <div class="verify-item">
+          <span class="verify-tag">T0</span>
+          <span>官方来源：FIFA官方赛程确认比赛时间与场地</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T2</span>
+          <span>结构化数据：百度体育、SofaScore技术统计与阵容数据</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">T3</span>
+          <span>新闻临场：英格兰右后卫伤病，刚果(金)阵容完整</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag">高置信</span>
+          <span>赛果置信：英格兰实力占优，赛果方向较明确</span>
+        </div>
+        <div class="verify-item">
+          <span class="verify-tag medium">中置信</span>
+          <span>比分置信：淘汰赛单场决胜，比分波动较大</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 小组赛阶段回顾 -->
+  <section>
+    <h2>小组赛阶段回顾</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">英格兰以小组头名稳健出线，攻防均衡；刚果(金)以小组第三惊险晋级，防守韧性强但进攻依赖维萨单点。英格兰整体占优，但需警惕右路伤病被针对。</p>
+        <div class="brief-chips">
+          <span class="brief-chip">英格兰明显占优</span>
+          <span class="brief-chip hot">凯恩冲击射手王·维萨能否继续爆种</span>
+          <span class="brief-chip risk">中风险</span>
+        </div>
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric-tile">
+          <span>状态更好</span>
+          <strong>英格兰</strong>
+        </div>
+        <div class="metric-tile">
+          <span>进攻更稳</span>
+          <strong>英格兰</strong>
+        </div>
+        <div class="metric-tile">
+          <span>后防可靠度</span>
+          <strong>英格兰</strong>
+        </div>
+        <div class="metric-tile">
+          <span>硬仗能力</span>
+          <strong>英格兰</strong>
+        </div>
+      </div>
+
+      <!-- 英格兰小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>英格兰</strong>
+          <span class="review-rank">L组 · 第1名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>2胜1平</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>7分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>6:2</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>+4</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 82%"></div>
+          </div>
+          <strong>8.2</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 80%"></div>
+          </div>
+          <strong>8.0</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 85%"></div>
+          </div>
+          <strong>8.5</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R1</span></span></td>
+              <td>克罗地亚</td>
+              <td>4-2</td>
+              <td>进球大战，贝林厄姆传射建功</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill draw">平</span><span>R2</span></span></td>
+              <td>加纳</td>
+              <td>0-0</td>
+              <td>控球碾压但破门乏术</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R3</span></span></td>
+              <td>巴拿马</td>
+              <td>2-0</td>
+              <td>凯恩创队史世界杯进球纪录</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>英格兰以L组头名身份晋级，小组赛2胜1平保持不败。攻防两端表现均衡，凯恩状态火热，贝林厄姆中场统治力强。但右后卫位置伤病频发，存在防守隐患。
+        </div>
+      </div>
+
+      <!-- 刚果(金)小组赛回顾 -->
+      <div class="review-card">
+        <div class="review-header">
+          <strong>刚果(金)</strong>
+          <span class="review-rank">K组 · 第3名</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <span>战绩</span>
+            <strong>1胜1平1负</strong>
+          </div>
+          <div class="review-stat">
+            <span>积分</span>
+            <strong>4分</strong>
+          </div>
+          <div class="review-stat">
+            <span>进失球</span>
+            <strong>4:3</strong>
+          </div>
+          <div class="review-stat">
+            <span>净胜球</span>
+            <strong>+1</strong>
+          </div>
+        </div>
+
+        <div class="meter-row">
+          <span>状态评分</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 70%"></div>
+          </div>
+          <strong>7.0</strong>
+        </div>
+        <div class="meter-row">
+          <span>进攻火力</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 65%"></div>
+          </div>
+          <strong>6.5</strong>
+        </div>
+        <div class="meter-row">
+          <span>防守稳定</span>
+          <div class="meter-track">
+            <div class="meter-fill" style="width: 75%"></div>
+          </div>
+          <strong>7.5</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对手</th>
+              <th>比分</th>
+              <th>关键说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill draw">平</span><span>R1</span></span></td>
+              <td>葡萄牙</td>
+              <td>1-1</td>
+              <td>维萨头球破门逼平葡萄牙</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill loss">负</span><span>R2</span></span></td>
+              <td>哥伦比亚</td>
+              <td>0-1</td>
+              <td>防守顽强但终被破门</td>
+            </tr>
+            <tr>
+              <td><span class="round-cell"><span class="result-pill">胜</span><span>R3</span></span></td>
+              <td>乌兹别克斯坦</td>
+              <td>3-1</td>
+              <td>维萨梅开二度带队逆转晋级</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="review-note">
+          <strong>阶段性总结：</strong>刚果(金)以K组第三身份队史首次晋级世界杯淘汰赛。球队主打5-3-2防守反击体系，防守韧性强，维萨状态火热3场3球。但整体实力有限，进攻过度依赖单点。
+        </div>
+      </div>
+
+      <div class="module-brief">
+        <p class="brief-text"><strong>阶段表现对本场影响：</strong>英格兰小组赛稳健发挥，攻防均衡，硬仗能力更强；刚果(金)防守韧性足但进攻手段单一。综合来看英格兰90分钟内取胜概率较高，但需警惕刚果(金)的反击爆冷能力。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心研判 -->
+  <section>
+    <h2>核心研判</h2>
+    <div class="module-body">
+      <div class="core-judgment">
+        <div class="judgment-title">🎯 核心结论</div>
+        <div class="judgment-content">
+          <p>本场比赛是一场<strong>实力悬殊但存在变数</strong>的淘汰赛对决。英格兰在纸面实力、阵容深度、大赛经验上全面占优，全队身价是刚果(金)的近10倍。<strong>英格兰90分钟内取胜概率约70-75%</strong>，晋级下一轮的概率超过80%。</p>
+          <p>但需注意：<strong>初盘仅开出英格兰让1.5球，理论上应更深</strong>，机构对英格兰大胜信心不足。刚果(金)的5-3-2防守体系韧性极强，曾逼平葡萄牙，且维萨状态火热，反击中具备一击致命的能力。英格兰右后卫位置的伤病隐患可能被针对。</p>
+          <p><strong>综合判断：</strong>英格兰小胜晋级是大概率事件，但赢盘难度较大。建议关注<strong>英格兰胜</strong>为主，让球需谨慎。总进球数看好<strong>2-3球</strong>。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主推盘口 -->
+  <section>
+    <h2>主推盘口</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">胜平负</div>
+          <div class="pred-value">主胜</div>
+          <div class="pred-odds">1.17</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让球胜平负(-1)</div>
+          <div class="pred-value">让胜</div>
+          <div class="pred-odds">1.64</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">总进球数</div>
+          <div class="pred-value">2-3球</div>
+          <div class="pred-odds">--</div>
+        </div>
+      </div>
+
+      <h3>盘口数据</h3>
+      <table class="odds-table">
+        <thead>
+          <tr>
+            <th>盘口类型</th>
+            <th>主胜/上盘</th>
+            <th>平局</th>
+            <th>客胜/下盘</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>胜平负</td>
+            <td><strong>1.17</strong></td>
+            <td>5.13</td>
+            <td>12.50</td>
+          </tr>
+          <tr>
+            <td>让球胜平负(-1)</td>
+            <td><strong>1.64</strong></td>
+            <td>3.80</td>
+            <td>3.90</td>
+          </tr>
+          <tr>
+            <td>亚盘</td>
+            <td>英格兰 -1.5</td>
+            <td>--</td>
+            <td>刚果(金) +1.5</td>
+          </tr>
+          <tr>
+            <td>大小球</td>
+            <td>大2.5球 1.85</td>
+            <td>--</td>
+            <td>小2.5球 1.95</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>盘口走势分析</h3>
+      <ul class="impact-list">
+        <li><strong>初盘定位：</strong>英格兰FIFA排名第4、全队身价超13亿欧元；刚果(金)排名第53、全队身价约1.4亿欧元。实力与身价差距悬殊，理论转换应指向两球甚至更深盘指，机构实际仅开出一球半(-1.5)，初始就浅开至少一个档位。</li>
+        <li><strong>后市变化：</strong>主胜赔率从初盘1.12持续走低至1.17附近，市场一致看好英格兰90分钟取胜。让球盘口有从-1升至-1.5的趋势。</li>
+        <li><strong>盘口解读：</strong>初盘浅开暗示机构对英格兰大胜信心不足，可能与右路伤病、淘汰赛谨慎心态有关。但英格兰整体实力优势明显，正常发挥下赢球问题不大。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 首发阵容分析 -->
+  <section>
+    <h2>首发阵容分析</h2>
+    <div class="module-body">
+      <div class="module-brief">
+        <p class="brief-text">以下为预计首发阵容，官方首发将在赛前1小时左右公布。英格兰右后卫位置存在伤病变数，刚果(金)阵容相对稳定。</p>
+      </div>
+
+      <div class="lineup-grid">
+        <div class="lineup-card">
+          <div class="lineup-team">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</div>
+          <div class="lineup-formation">阵型：4-2-3-1</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">1-皮克福德（埃弗顿）</div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            25-斯彭斯（热刺）、6-格伊（曼城）、2-孔萨（阿斯顿维拉）、3-尼科·奥赖利
+          </div>
+          
+          <div class="lineup-position">后腰</div>
+          <div class="lineup-players">
+            4-赖斯（阿森纳）、8-埃利奥特·安德森（诺丁汉森林）
+          </div>
+          
+          <div class="lineup-position">前卫</div>
+          <div class="lineup-players">
+            <span class="key-player">7-萨卡（阿森纳）</span>、
+            <span class="key-player">10-贝林厄姆（皇家马德里）</span>、
+            11-拉什福德（巴塞罗那）
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            <span class="key-player">9-哈里·凯恩（拜仁慕尼黑）</span>
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--orange);">⚠️ 伤病情况</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            里斯·詹姆斯（腿后侧伤势）、宽萨（脚踝伤，末轮伤退）大概率伤缺；斯彭斯改打右后卫
+          </div>
+        </div>
+
+        <div class="lineup-card">
+          <div class="lineup-team">🇨🇩 刚果(金)</div>
+          <div class="lineup-formation">阵型：5-3-2</div>
+          
+          <div class="lineup-position">门将</div>
+          <div class="lineup-players">1-姆帕西·恩扎乌（梅斯）</div>
+          
+          <div class="lineup-position">后卫</div>
+          <div class="lineup-players">
+            2-万-比萨卡（曼联）、4-图安泽贝、22-姆本巴（队长）、26-马苏亚库
+          </div>
+          
+          <div class="lineup-position">中场</div>
+          <div class="lineup-players">
+            7-姆布库、8-穆图萨米、14-诺亚·萨迪基
+          </div>
+          
+          <div class="lineup-position">前锋</div>
+          <div class="lineup-players">
+            17-巴坎布（皇家贝蒂斯）、
+            <span class="key-player">20-约安·维萨（纽卡斯尔联）</span>
+          </div>
+          
+          <div class="lineup-position" style="margin-top: 12px; color: var(--green);">✅ 核心球员</div>
+          <div class="lineup-players" style="font-size: 12px; color: var(--muted);">
+            维萨：世界杯3场3球，状态火热；巴坎布：冲击力强，经验丰富；万-比萨卡：防守能力强，英超经验
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 打法克制分析 -->
+  <section>
+    <h2>打法克制分析</h2>
+    <div class="module-body">
+      <div class="style-analysis">
+        <div class="style-card">
+          <div class="style-team">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>控球型打法，4-2-3-1阵型，强调中场控制与边路突破
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>边路传中、定位球、中路渗透、贝林厄姆后排插上
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>阵容深度厚、个人能力强、大赛经验丰富、凯恩支点作用明显
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>右后卫伤病、面对密集防守破门效率有待提升、淘汰赛慢热
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-team">🇨🇩 刚果(金)打法特点</div>
+          <div class="style-item">
+            <strong>战术体系：</strong>防守反击，5-3-2阵型，链式防守+快速反击
+          </div>
+          <div class="style-item">
+            <strong>进攻手段：</strong>反击速度、定位球头球、维萨个人能力
+          </div>
+          <div class="style-item">
+            <strong>核心优势：</strong>防守韧性强、反击速度快、维萨状态火热、无压力心态
+          </div>
+          <div class="style-item">
+            <strong>潜在弱点：</strong>整体实力有限、进攻手段单一、控球能力弱、大赛经验不足
+          </div>
+        </div>
+      </div>
+
+      <h3>克制关系分析</h3>
+      <ul class="impact-list">
+        <li><strong>控球VS防反：</strong>英格兰控球型打法对阵刚果(金)5-3-2防守体系，是典型的"攻坚VS铁桶阵"对决。英格兰需要破解密集防守，刚果(金)则伺机反击。</li>
+        <li><strong>边路对决：</strong>英格兰的萨卡、拉什福德边路突破能力强，但刚果(金)的万-比萨卡防守能力出色，右路对决值得关注。</li>
+        <li><strong>定位球：</strong>英格兰的定位球威胁大（凯恩头球），刚果(金)也有定位球得分能力（维萨头球），定位球可能成为重要得分手段。</li>
+        <li><strong>右路隐患：</strong>英格兰右后卫斯彭斯攻强守弱，刚果(金)可能针对性地从这一侧发起反击。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 技术统计对比 -->
+  <section>
+    <h2>技术统计对比</h2>
+    <div class="module-body">
+      <div class="stats-comparison">
+        <div class="stat-row">
+          <div class="stat-home">62%</div>
+          <div class="stat-label">场均控球率</div>
+          <div class="stat-away">40%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 80%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 50%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">18次</div>
+          <div class="stat-label">场均射门</div>
+          <div class="stat-away">8.6次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 85%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 40%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">6.6次</div>
+          <div class="stat-label">场均射正</div>
+          <div class="stat-away">2.8次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 80%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 35%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">6.7次</div>
+          <div class="stat-label">场均角球</div>
+          <div class="stat-away">--</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 75%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 30%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">89.3%</div>
+          <div class="stat-label">传球成功率</div>
+          <div class="stat-away">--</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 90%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 60%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">16.3次</div>
+          <div class="stat-label">场均拦截</div>
+          <div class="stat-away">9.2次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 70%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 45%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">14次</div>
+          <div class="stat-label">绝佳机会</div>
+          <div class="stat-away">5次</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 85%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 35%"></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-home">42.8%</div>
+          <div class="stat-label">绝佳机会转化率</div>
+          <div class="stat-away">60%</div>
+        </div>
+        <div class="stat-bar-row">
+          <div class="stat-bar-home" style="width: 60%"></div>
+          <div class="stat-bar-label"></div>
+          <div class="stat-bar-away" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="review-note" style="margin-top: 16px;">
+        <strong>数据解读：</strong>英格兰在控球、射门、传球等数据上全面占优，符合其控球型打法的特点。但值得注意的是，刚果(金)的绝佳机会转化率高达60%，高于英格兰的42.8%，说明其反击效率很高，把握机会能力强。英格兰虽然创造机会多，但面对密集防守时的转化效率有待提升。
+      </div>
+    </div>
+  </section>
+
+  <!-- 胜平负预测 -->
+  <section>
+    <h2>胜平负预测</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">主胜</div>
+          <div class="pred-value">72%</div>
+          <div class="pred-odds">1.17</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">平局</div>
+          <div class="pred-value">18%</div>
+          <div class="pred-odds">5.13</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">客胜</div>
+          <div class="pred-value">10%</div>
+          <div class="pred-odds">12.50</div>
+        </div>
+      </div>
+
+      <h3>预测分析</h3>
+      <ul class="impact-list">
+        <li><strong>主胜（72%）：</strong>英格兰整体实力占优，阵容深度厚，大赛经验丰富。正常发挥下，90分钟内取胜是大概率事件。但赢几个球存在变数。</li>
+        <li><strong>平局（18%）：</strong>刚果(金)防守韧性强，曾逼平葡萄牙。如果英格兰久攻不下，心态可能出现变化，存在被逼平的可能。若进入加时赛，英格兰优势会更大。</li>
+        <li><strong>客胜（10%）：</strong>爆冷概率较低，但并非完全没有可能。如果维萨抓住反击机会破门，而英格兰又迟迟无法进球，可能出现冷门。但整体来看概率较低。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 让球胜平负预测 -->
+  <section>
+    <h2>让球胜平负预测（英格兰-1）</h2>
+    <div class="module-body">
+      <div class="main-prediction">
+        <div class="pred-card recommended">
+          <div class="pred-label">让胜</div>
+          <div class="pred-value">52%</div>
+          <div class="pred-odds">1.64</div>
+          <div class="pred-recommend">主推</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让平</div>
+          <div class="pred-value">25%</div>
+          <div class="pred-odds">3.80</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-label">让负</div>
+          <div class="pred-value">23%</div>
+          <div class="pred-odds">3.90</div>
+        </div>
+      </div>
+
+      <h3>让球分析</h3>
+      <ul class="impact-list">
+        <li><strong>让胜（52%）：</strong>英格兰赢2球及以上的概率略超五成。刚果(金)防守虽强，但英格兰进攻火力充足，凯恩、贝林厄姆、萨卡等都有得分能力。</li>
+        <li><strong>让平（25%）：</strong>英格兰净胜1球的概率约四分之一。1-0、2-1这样的比分都有可能。</li>
+        <li><strong>让负（23%）：</strong>英格兰赢不了1球的概率约两成多，包括平局和输球。考虑到英格兰的实力优势，这个概率相对合理。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 比分预测 -->
+  <section>
+    <h2>比分预测</h2>
+    <div class="module-body">
+      <div class="score-grid">
+        <div class="score-item top">
+          <div class="score-text">2-0</div>
+          <div class="score-prob">概率最高</div>
+        </div>
+        <div class="score-item top">
+          <div class="score-text">3-0</div>
+          <div class="score-prob">概率较高</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">2-1</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-0</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">3-1</div>
+          <div class="score-prob">概率中等</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">1-1</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">0-0</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+        <div class="score-item">
+          <div class="score-text">4-0</div>
+          <div class="score-prob">概率较低</div>
+        </div>
+      </div>
+
+      <h3>比分分析</h3>
+      <ul class="impact-list">
+        <li><strong>2-0（最可能）：</strong>英格兰正常发挥，上下半场各进一球，零封对手。符合两队实力差距和打法特点。</li>
+        <li><strong>3-0（次可能）：</strong>英格兰进攻打开，大胜对手。如果刚果(金)过早丢球，防线可能崩溃。</li>
+        <li><strong>2-1（有一定可能）：</strong>英格兰取胜，但刚果(金)通过反击扳回一球。维萨的存在让这个比分有可能性。</li>
+        <li><strong>1-0（小胜可能）：</strong>英格兰久攻不下，最终靠定位球或点球小胜。淘汰赛谨慎心态下可能出现。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 总进球数预测 -->
+  <section>
+    <h2>总进球数预测</h2>
+    <div class="module-body">
+      <div class="goals-grid">
+        <div class="goals-item">
+          <div class="goals-num">0球</div>
+          <div class="goals-label">概率低</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">1球</div>
+          <div class="goals-label">概率较低</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">2球</div>
+          <div class="goals-label">概率最高</div>
+        </div>
+        <div class="goals-item top">
+          <div class="goals-num">3球</div>
+          <div class="goals-label">概率最高</div>
+        </div>
+        <div class="goals-item">
+          <div class="goals-num">4+球</div>
+          <div class="goals-label">概率中等</div>
+        </div>
+      </div>
+
+      <h3>进球数分析</h3>
+      <ul class="impact-list">
+        <li><strong>2-3球（最可能）：</strong>综合来看，本场总进球数在2-3球的概率最高。英格兰进攻能力强，但刚果(金)防守韧性足，不会轻易丢太多球。</li>
+        <li><strong>大小球盘口：</strong>机构开出2.5球盘口，大球赔率1.85，小球1.95，基本均衡。略倾向大球，但差距不大。</li>
+        <li><strong>进球时段：</strong>英格兰可能在下半场发力，下半场进球数可能多于上半场。刚果(金)的反击进球可能出现在比赛后半段。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 半全场预测 -->
+  <section>
+    <h2>半全场预测</h2>
+    <div class="module-body">
+      <div class="half-full-grid">
+        <div class="hf-item top">
+          <div class="hf-text">平胜</div>
+          <div class="hf-prob">概率最高</div>
+        </div>
+        <div class="hf-item top">
+          <div class="hf-text">胜胜</div>
+          <div class="hf-prob">概率较高</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平平</div>
+          <div class="hf-prob">概率中等</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">胜负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">平负</div>
+          <div class="hf-prob">概率低</div>
+        </div>
+        <div class="hf-item">
+          <div class="hf-text">负负</div>
+          <div class="hf-prob">概率极低</div>
+        </div>
+      </div>
+
+      <h3>半全场分析</h3>
+      <ul class="impact-list">
+        <li><strong>平胜（最可能）：</strong>上半场平局，下半场英格兰取胜。淘汰赛开局双方通常比较谨慎，刚果(金)防守韧性强，上半场可能守住平局。</li>
+        <li><strong>胜胜（次可能）：</strong>英格兰上半场就取得领先并最终取胜。如果英格兰开局顺利，早早进球，可能全场压制。</li>
+        <li><strong>平平（有一定可能）：</strong>全场平局。如果英格兰久攻不下，而刚果(金)防守出色，可能出现平局进入加时。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI深度分析 -->
+  <section>
+    <h2>AI深度分析</h2>
+    <div class="module-body">
+      <div class="ai-box">
+        <div class="ai-title">🤖 AI智能分析</div>
+        <div class="ai-content">
+          <p><strong>【实力差距分析】</strong>从FIFA排名和全队身价来看，英格兰与刚果(金)存在巨大差距。英格兰世界排名第4，全队身价约13.2亿欧元；刚果(金)世界排名第53，全队身价约1.4亿欧元。身价差距接近10倍，这在世界杯淘汰赛中是比较罕见的。</p>
+          
+          <p><strong>【战术博弈分析】</strong>这是一场典型的"控球进攻VS防守反击"对决。英格兰的4-2-3-1控球体系对阵刚果(金)的5-3-2防守体系。英格兰需要破解密集防守，关键在于边路突破、定位球和贝林厄姆的后排插上。刚果(金)则需要依靠防守韧性和反击速度，利用维萨的个人能力寻找机会。</p>
+          
+          <p><strong>【关键变量分析】</strong>本场最大的变数在于英格兰的右后卫位置。里斯·詹姆斯和宽萨相继受伤，斯彭斯改打右后卫，其防守能力相对较弱。刚果(金)可能针对性地从这一侧发起反击。如果维萨能抓住机会，可能给英格兰制造麻烦。</p>
+          
+          <p><strong>【心理因素分析】</strong>英格兰作为夺冠热门，背负着较大的压力。淘汰赛单场决胜的赛制下，强队反而更容易出现心态问题。刚果(金)作为首次晋级淘汰赛的球队，没有任何压力，可能会超水平发挥。"光脚的不怕穿鞋的"，这是爆冷的温床。</p>
+          
+          <p><strong>【综合判断】</strong>综合各方面因素，英格兰取胜晋级是大概率事件，但比赛过程可能不会轻松。刚果(金)的防守韧性和反击能力会给英格兰制造一定麻烦。建议关注英格兰小胜的可能性，让球盘需谨慎。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风险提示 -->
+  <section>
+    <h2>风险提示</h2>
+    <div class="module-body">
+      <div class="risk-box">
+        <div class="risk-title">⚠️ 投资风险提示</div>
+        <ul class="risk-list">
+          <li><strong>淘汰赛爆冷风险：</strong>世界杯淘汰赛单场决胜，冷门概率高于小组赛。强队可能因为心态、伤病、战术等因素翻车。</li>
+          <li><strong>英格兰右路伤病隐患：</strong>右后卫位置连续伤病，可能成为防守短板，被刚果(金)针对性打击。</li>
+          <li><strong>密集防守破解难题：</strong>刚果(金)的5-3-2防守体系韧性极强，英格兰可能久攻不下，心态出现变化。</li>
+          <li><strong>维萨状态火热：</strong>刚果(金)前锋维萨世界杯3场3球，状态极佳，反击中具备一击致命的能力。</li>
+          <li><strong>初盘浅开信号：</strong>机构初盘仅开出1.5球，理论上应更深，暗示对英格兰大胜信心不足。</li>
+          <li><strong>加时赛/点球变数：</strong>如果90分钟打平，进入加时赛和点球大战，偶然性会大大增加。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 免责声明 -->
+  <section>
+    <h2>免责声明</h2>
+    <div class="module-body">
+      <div class="disclaimer">
+        <p><strong>【重要声明】</strong>本分析报告仅供参考，不构成任何投注建议或投资指导。足球比赛存在较大的偶然性和不确定性，实际赛果可能与分析预测存在较大差异。</p>
+        <p>本报告基于公开数据和信息进行分析，数据来源包括但不限于FIFA官网、百度体育、懂球帝、直播吧、新浪体育等。由于数据可能存在延迟或误差，分析结果仅供参考。</p>
+        <p>请理性看待足球比赛，享受足球乐趣，切勿沉迷赌博。未成年人禁止参与任何形式的赌博活动。</p>
+        <p>本报告所有分析均为AI自动生成，不代表任何官方立场。据此操作，风险自担。</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

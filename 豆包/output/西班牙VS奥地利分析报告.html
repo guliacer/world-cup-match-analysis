@@ -1,0 +1,2013 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024, initial-scale=1">
+<title>西班牙 vs 奥地利 比赛预测分析</title>
+
+<style>
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --card-inner: #f8fbff;
+  --text: #111827;
+  --muted: #657083;
+  --primary: #19b981;
+  --primary-deep: #087a5b;
+  --accent: #ff8a2a;
+  --border: #e3e9f2;
+  --border-strong: #c9d5e4;
+  --orange: #f47b20;
+  --green: #13a66b;
+  --red: #e34b5f;
+  --gray: #7c8797;
+  --blue: #3478f6;
+  --violet: #6657f5;
+  --surface-blue: #eff6ff;
+  --surface-green: #ecfff7;
+  --surface-orange: #fff6ea;
+  --surface-red: #fff1f3;
+  --surface-violet: #f2f0ff;
+  --page-max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #edf3fb 100%);
+  color: var(--text);
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.6;
+  min-width: calc(var(--page-max) + 36px);
+}
+
+.page {
+  width: var(--page-max);
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 28px 0 60px;
+  min-width: 0;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.title-area .sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.match-title-area {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.match-title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.team-title-home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-title-away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.team-flag {
+  width: 46px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.09);
+  background: #fff;
+  flex: 0 0 auto;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title-info { min-width: 0; }
+
+.team-name {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.team-rank {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.vs-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--blue);
+  padding: 0 4px;
+  line-height: 1;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+h2::before {
+  content: "•";
+  color: var(--blue);
+  font-size: 28px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--blue);
+  margin: 18px 0 10px;
+}
+
+.module-brief {
+  background: var(--surface-blue);
+  border: 1px solid #c7e0ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.brief-text {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.brief-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brief-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #c7e0ff;
+}
+
+.brief-chip.hot {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.brief-chip.risk {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.brief-chip.green {
+  background: var(--surface-green);
+  color: var(--green);
+  border-color: #a7f3d0;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stamp-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.stamp-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stamp-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--primary);
+}
+
+.tag.orange {
+  background: var(--surface-orange);
+  color: var(--orange);
+  border-color: #ffd2a3;
+}
+
+.tag.red {
+  background: var(--surface-red);
+  color: var(--red);
+  border-color: #ffc5cd;
+}
+
+.tag.violet {
+  background: var(--surface-violet);
+  color: var(--violet);
+  border-color: #c4b5fd;
+}
+
+.venue-panel, .evidence-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.venue-row, .evidence-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.venue-label, .evidence-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.venue-value, .evidence-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.venue-value strong, .evidence-value strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.weather-alert {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+.impact-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.impact-list li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-tile {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-tile span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metric-tile strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.review-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.review-card h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.progress-fill.green { background: var(--green); }
+.progress-fill.orange { background: var(--orange); }
+.progress-fill.red { background: var(--red); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--card-inner);
+  font-weight: 700;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:hover {
+  background: var(--card-inner);
+}
+
+.result-win { color: var(--green); font-weight: 700; }
+.result-draw { color: var(--violet); font-weight: 700; }
+.result-loss { color: var(--red); font-weight: 700; }
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.lineup-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.lineup-card h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--blue);
+  text-align: center;
+}
+
+.lineup-formation {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.lineup-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.lineup-position:last-child {
+  border-bottom: none;
+}
+
+.position-label {
+  color: var(--muted);
+  font-size: 12px;
+  width: 50px;
+}
+
+.player-name {
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+
+.injury-note {
+  background: var(--surface-red);
+  border: 1px solid #ffc5cd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #991b1b;
+}
+
+.odds-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.odds-table th, .odds-table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.odds-highlight {
+  background: var(--surface-green);
+  color: var(--primary-deep);
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.prediction-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.prediction-card .prob {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--blue);
+  margin: 8px 0;
+}
+
+.prediction-card .label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.prediction-card.win .prob { color: var(--green); }
+.prediction-card.draw .prob { color: var(--violet); }
+.prediction-card.loss .prob { color: var(--red); }
+
+.score-prediction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.score-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-item .score {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+
+.score-item .prob {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.score-item.primary {
+  border-color: var(--blue);
+  background: var(--surface-blue);
+}
+
+.ai-analysis {
+  background: linear-gradient(135deg, var(--surface-blue) 0%, var(--surface-violet) 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  padding: 18px;
+  margin: 16px 0;
+}
+
+.ai-analysis h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--violet);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-analysis p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.ai-analysis p:last-child { margin-bottom: 0; }
+
+.risk-panel {
+  background: var(--surface-orange);
+  border: 1px solid #ffd2a3;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.risk-panel h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #92400e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.risk-list li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.team-stats {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.team-stats h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--blue);
+  text-align: center;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.stat-row:last-child { border-bottom: none; }
+
+.stat-label { color: var(--muted); }
+.stat-value { font-weight: 700; color: var(--text); }
+
+.comparison-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.bar-home {
+  text-align: right;
+  padding-right: 8px;
+  font-weight: 600;
+}
+
+.bar-away {
+  text-align: left;
+  padding-left: 8px;
+  font-weight: 600;
+}
+
+.bar-label {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.historical-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.historical-table th, .historical-table td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.tactics-card {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.tactics-card h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--blue);
+}
+
+.tactics-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.keymatch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.keymatch-item {
+  background: var(--card-inner);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.keymatch-item h5 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--orange);
+}
+
+.keymatch-item p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.data-source {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.data-source strong { color: var(--gray); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 标题区 -->
+  <div class="title-area">
+    <h1>2026美加墨世界杯 比赛预测分析</h1>
+    <div class="sub">1/16决赛 · 32进16淘汰赛</div>
+  </div>
+
+  <div class="match-title-area">
+    <div class="match-title-row">
+      <div class="team-title team-title-home">
+        <div class="team-title-info">
+          <div class="team-name">西班牙</div>
+          <div class="team-rank">FIFA世界排名 #3 · H组第1</div>
+        </div>
+        <div class="team-flag">🇪🇸</div>
+      </div>
+      <div class="vs-text">VS</div>
+      <div class="team-title team-title-away">
+        <div class="team-flag">🇦🇹</div>
+        <div class="team-title-info">
+          <div class="team-name">奥地利</div>
+          <div class="team-rank">FIFA世界排名 #24 · J组第2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 比赛信息 -->
+  <section>
+    <h2>比赛信息</h2>
+
+    <div class="module-brief">
+      <p class="brief-text">中立场淘汰赛，西班牙传控体系迎战奥地利高压逼抢，战术风格碰撞成最大看点。</p>
+      <div class="brief-chips">
+        <span class="brief-chip">中立场</span>
+        <span class="brief-chip hot">战术对决</span>
+        <span class="brief-chip green">天气良好</span>
+      </div>
+    </div>
+
+    <div class="stamp-grid">
+      <div class="stamp-item">
+        <div class="stamp-label">比赛时间</div>
+        <div class="stamp-value">2026-07-03 03:00</div>
+      </div>
+      <div class="stamp-item">
+        <div class="stamp-label">数据截止时间</div>
+        <div class="stamp-value">2026-07-02 11:15</div>
+      </div>
+      <div class="stamp-item">
+        <div class="stamp-label">首发状态</div>
+        <div class="stamp-value">预计</div>
+      </div>
+      <div class="stamp-item">
+        <div class="stamp-label">比赛阶段</div>
+        <div class="stamp-value">1/16决赛</div>
+      </div>
+    </div>
+
+    <div class="venue-panel">
+      <div class="venue-row">
+        <div class="venue-label">比赛场地</div>
+        <div class="venue-value"><strong>洛杉矶SoFi体育场（Los Angeles Stadium）</strong></div>
+      </div>
+      <div class="venue-row">
+        <div class="venue-label">场地属性</div>
+        <div class="venue-value">中立场地，无主场加成 · 混合草皮 · 可容纳约70,240人</div>
+      </div>
+      <div class="venue-row">
+        <div class="venue-label">天气情况</div>
+        <div class="venue-value">晴，16-24℃，西南风2级，降水概率0%，湿度约56%</div>
+      </div>
+      <div class="venue-row">
+        <div class="venue-label">天气核验</div>
+        <div class="venue-value">多源天气数据一致，比赛日天气晴好，无雷暴、高温或强风风险，开球状态正常</div>
+      </div>
+    </div>
+
+    <div class="weather-alert">
+      <strong>场地影响分析：</strong>
+      <ul class="impact-list">
+        <li>SoFi体育场拥有半透明ETFE顶棚，可有效遮阳挡雨，比赛受天气影响较小</li>
+        <li>洛杉矶当地时间下午14:00开球，气温适中，对两队体能消耗均在可控范围</li>
+        <li>混合草皮场地对传控型球队西班牙更为有利，传球质量和控球稳定性有保障</li>
+        <li>中立场地无观众倾向差异，两队均需适应客场作战氛围</li>
+        <li>西班牙从亚特兰大转场洛杉矶，奥地利从多地辗转，旅行疲劳度相当</li>
+      </ul>
+    </div>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>FIFA官方赛程、央视网体育、墨迹天气、中国天气网、2345天气预报 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是
+    </div>
+  </section>
+
+  <!-- 小组赛回顾分析 -->
+  <section>
+    <h2>小组赛回顾分析</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙状态更稳、防守更牢、硬仗能力更强；奥地利进攻有威胁但防守波动大，靠绝平惊险出线。</strong>西班牙小组赛2胜1平零失球，防守稳定性冠绝赛事；奥地利1胜1平1负，进攻效率不俗但后防隐患明显。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">西班牙：防守稳固</span>
+        <span class="brief-chip hot">奥地利：进攻高效</span>
+        <span class="brief-chip risk">奥地利：防守波动</span>
+      </div>
+    </div>
+
+    <h3>对本场的直接影响</h3>
+    <div class="two-col">
+      <div class="review-card">
+        <h4>🇪🇸 西班牙（H组第1）</h4>
+        <div class="stamp-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="stamp-item">
+            <div class="stamp-label">状态评分</div>
+            <div class="stamp-value" style="color: var(--green);">8.5/10</div>
+          </div>
+          <div class="stamp-item">
+            <div class="stamp-label">进攻火力</div>
+            <div class="stamp-value" style="color: var(--blue);">7.5/10</div>
+          </div>
+          <div class="stamp-item">
+            <div class="stamp-label">后防可靠度</div>
+            <div class="stamp-value" style="color: var(--green);">9.5/10</div>
+          </div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill green" style="width: 85%;"></div></div>
+        <div style="font-size: 12px; color: var(--muted); text-align: center;">综合状态</div>
+      </div>
+
+      <div class="review-card">
+        <h4>🇦🇹 奥地利（J组第2）</h4>
+        <div class="stamp-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="stamp-item">
+            <div class="stamp-label">状态评分</div>
+            <div class="stamp-value" style="color: var(--orange);">7.0/10</div>
+          </div>
+          <div class="stamp-item">
+            <div class="stamp-label">进攻火力</div>
+            <div class="stamp-value" style="color: var(--orange);">7.5/10</div>
+          </div>
+          <div class="stamp-item">
+            <div class="stamp-label">后防可靠度</div>
+            <div class="stamp-value" style="color: var(--red);">5.5/10</div>
+          </div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill orange" style="width: 70%;"></div></div>
+        <div style="font-size: 12px; color: var(--muted); text-align: center;">综合状态</div>
+      </div>
+    </div>
+
+    <h3>小组赛战绩详情</h3>
+    <div class="two-col">
+      <div>
+        <h4 style="text-align: center; margin-bottom: 10px;">🇪🇸 西班牙小组赛</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对阵</th>
+              <th>比分</th>
+              <th>结果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">R1</span></td>
+              <td>西班牙 vs 佛得角</td>
+              <td>0-0</td>
+              <td><span class="result-draw">平</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag green">R2</span></td>
+              <td>西班牙 vs 沙特</td>
+              <td>4-0</td>
+              <td><span class="result-win">胜</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag green">R3</span></td>
+              <td>乌拉圭 vs 西班牙</td>
+              <td>0-1</td>
+              <td><span class="result-win">胜</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size: 12px; color: var(--muted); text-align: center;">
+          2胜1平 · 积7分 · 进5球 · 失0球 · 净胜+5
+        </div>
+      </div>
+
+      <div>
+        <h4 style="text-align: center; margin-bottom: 10px;">🇦🇹 奥地利小组赛</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>轮次</th>
+              <th>对阵</th>
+              <th>比分</th>
+              <th>结果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag green">R1</span></td>
+              <td>奥地利 vs 约旦</td>
+              <td>3-1</td>
+              <td><span class="result-win">胜</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag red">R2</span></td>
+              <td>阿根廷 vs 奥地利</td>
+              <td>2-0</td>
+              <td><span class="result-loss">负</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag violet">R3</span></td>
+              <td>奥地利 vs 阿尔及利亚</td>
+              <td>3-3</td>
+              <td><span class="result-draw">平</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size: 12px; color: var(--muted); text-align: center;">
+          1胜1平1负 · 积4分 · 进6球 · 失6球 · 净胜0
+        </div>
+      </div>
+    </div>
+
+    <h3>本场看点</h3>
+    <div class="keymatch-grid">
+      <div class="keymatch-item">
+        <h5>传控 vs 高压</h5>
+        <p>西班牙场均69%控球率的传控体系，遇上朗尼克麾下奥地利的全场高压逼抢，战术哲学的直接碰撞。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>边路对决</h5>
+        <p>西班牙天才边锋亚马尔对位奥地利左后卫莱默尔（客串），边路攻防是本场关键胜负手。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>防守纪录</h5>
+        <p>西班牙小组赛三战零封，能否延续防守纪录面对奥地利的反击冲击是一大看点。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>黑马成色</h5>
+        <p>奥地利时隔72年重返世界杯淘汰赛，能否延续黑马本色掀翻欧洲杯冠军西班牙。</p>
+      </div>
+    </div>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>FIFA官方、央视网体育、懂球帝、今日头条体育媒体 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是
+    </div>
+  </section>
+
+  <!-- 核心研判 -->
+  <section>
+    <h2>核心研判</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙实力全面占优，常规时间取胜概率较高，但需警惕奥地利高压逼抢带来的开局风险。</strong>西班牙在控球、传球、防守稳定性上均有明显优势；奥地利依靠高强度逼抢和反击有一定爆冷可能，但整体胜率偏低。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">西班牙胜率占优</span>
+        <span class="brief-chip hot">防平局</span>
+        <span class="brief-chip risk">警惕开局逼抢</span>
+      </div>
+    </div>
+
+    <div class="prediction-grid">
+      <div class="prediction-card win">
+        <div class="label">西班牙胜</div>
+        <div class="prob">58%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card draw">
+        <div class="label">平局</div>
+        <div class="prob">27%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card loss">
+        <div class="label">奥地利胜</div>
+        <div class="prob">15%</div>
+        <div class="label">概率</div>
+      </div>
+    </div>
+
+    <h3>关键判断依据</h3>
+    <div class="keymatch-grid">
+      <div class="keymatch-item">
+        <h5>✅ 西班牙最大优势</h5>
+        <p>传控体系成熟，场均控球率超69%，小组赛零失球防守稳固，阵容深度充足，核心球员体能充沛。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>⚠️ 西班牙最大风险</h5>
+        <p>边路主力尼科·威廉姆斯、皮诺伤缺，边路突破能力下降；面对高压逼抢时后场出球存在失误风险。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>✅ 奥地利最大优势</h5>
+        <p>朗尼克高位逼抢体系成熟，开局抢攻能力强；进攻效率高，xG3.7却打入6球，射门转化率达22.2%。</p>
+      </div>
+      <div class="keymatch-item">
+        <h5>⚠️ 奥地利最大风险</h5>
+        <p>防守端波动大，场均失2球；左后卫姆韦内受伤，防线不整；体能60分钟后下滑明显，后防漏洞增多。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主推盘口 -->
+  <section>
+    <h2>主推盘口</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>主盘推荐：西班牙让球半上盘有一定阻力，更看好西班牙常规时间小胜格局。</strong>大小球方面，两队风格一稳一攻，但西班牙缺少强力中锋攻坚偏稳健，奥地利逼抢消耗节奏偏慢，优先看好2.5小球。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">首选：西班牙胜</span>
+        <span class="brief-chip hot">次防：平局</span>
+        <span class="brief-chip">大小球：小球</span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-tile">
+        <span>胜平负首选</span>
+        <strong style="color: var(--green);">主胜</strong>
+      </div>
+      <div class="metric-tile">
+        <span>让球方向</span>
+        <strong style="color: var(--blue);">西班牙 -1.5</strong>
+      </div>
+      <div class="metric-tile">
+        <span>大小球倾向</span>
+        <strong style="color: var(--violet);">2.5 小球</strong>
+      </div>
+      <div class="metric-tile">
+        <span>比分首选</span>
+        <strong style="color: var(--orange);">2-0</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主盘预测 -->
+  <section>
+    <h2>主盘预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙让球半盘口下，赢盘难度较大，更看好西班牙1球小胜或2球完胜的格局。</strong>机构给出西班牙让球半的深盘，充分认可西班牙实力优势，但也考虑到奥地利防守韧性和爆冷可能。</p>
+      <div class="brief-chips">
+        <span class="brief-chip">让球半盘口</span>
+        <span class="brief-chip orange">赢盘难度中等</span>
+      </div>
+    </div>
+
+    <div class="prediction-grid">
+      <div class="prediction-card win">
+        <div class="label">西班牙赢盘</div>
+        <div class="prob">45%</div>
+        <div class="label">（赢2球+）</div>
+      </div>
+      <div class="prediction-card draw">
+        <div class="label">走盘/输半</div>
+        <div class="prob">22%</div>
+        <div class="label">（赢1球）</div>
+      </div>
+      <div class="prediction-card loss">
+        <div class="label">奥地利赢盘</div>
+        <div class="prob">33%</div>
+        <div class="label">（平/胜）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 盘口走势与市场解读 -->
+  <section>
+    <h2>盘口走势与市场解读</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>机构初始定位合理，水位平稳无明显异动，市场对西班牙取胜信心较一致，但对大胜存疑。</strong>亚盘从初盘到临场维持在西班牙让球半区间，水位小幅波动，无明显冷热异常。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">水位平稳</span>
+        <span class="brief-chip">无异常异动</span>
+      </div>
+    </div>
+
+    <h3>市场解读</h3>
+    <div class="tactics-card">
+      <h4>欧赔方向</h4>
+      <p>主胜赔1.59处于合理区间，平赔3.40、客胜4.85，机构对平局有一定防范。胜赔分布集中，市场对西班牙取胜认可度较高，但大胜信心不足。</p>
+    </div>
+    <div class="tactics-card">
+      <h4>亚盘方向</h4>
+      <p>西班牙让球半0.94水，上盘水位略高，显示机构对西班牙净胜2球以上持谨慎态度。考虑到西班牙小组赛进攻效率一般，以及奥地利防守韧性，上盘存在一定阻力。</p>
+    </div>
+    <div class="tactics-card">
+      <h4>大小球方向</h4>
+      <p>2.5球盘口下，小球方向更被看好。西班牙传控节奏偏慢，奥地利逼抢消耗大，两队大开大合对攻概率偏低，更可能是小比分格局。</p>
+    </div>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>500彩票网、中国体彩竞彩、主流体育媒体盘口分析 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是
+    </div>
+  </section>
+
+  <!-- 市场数据 -->
+  <section>
+    <h2>市场数据</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>欧赔、亚盘、大小球数据汇总，多机构数据交叉验证。</strong></p>
+    </div>
+
+    <h3>欧赔数据（胜平负）</h3>
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>公司/来源</th>
+          <th>主胜</th>
+          <th>平局</th>
+          <th>客胜</th>
+          <th>更新时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>中国竞彩</td>
+          <td><span class="odds-highlight">1.59</span></td>
+          <td>3.40</td>
+          <td>4.85</td>
+          <td>07-01 20:59</td>
+        </tr>
+        <tr>
+          <td>主流机构均值</td>
+          <td>1.55</td>
+          <td>3.60</td>
+          <td>5.20</td>
+          <td>07-02 08:00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>亚盘数据（让球）</h3>
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>公司/来源</th>
+          <th>上盘水位</th>
+          <th>盘口</th>
+          <th>下盘水位</th>
+          <th>更新时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>澳门</td>
+          <td>0.94</td>
+          <td><span class="odds-highlight">球半</span></td>
+          <td>0.90</td>
+          <td>06-30 05:16</td>
+        </tr>
+        <tr>
+          <td>主流机构均值</td>
+          <td>0.92</td>
+          <td>球半</td>
+          <td>0.93</td>
+          <td>07-02 08:00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>大小球数据</h3>
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>公司/来源</th>
+          <th>大球水位</th>
+          <th>盘口</th>
+          <th>小球水位</th>
+          <th>倾向</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>主流机构均值</td>
+          <td>0.95</td>
+          <td><span class="odds-highlight">2.5球</span></td>
+          <td>0.90</td>
+          <td><span class="tag">小球略低</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>中国体彩竞彩网、500彩票网、OddsPortal、主流博彩公司公开数据 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是
+    </div>
+  </section>
+
+  <!-- 首发阵容分析 -->
+  <section>
+    <h2>首发阵容分析</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙主力框架稳定，边路有伤病隐患；奥地利防线不整，左后卫位置需客串。</strong>双方首发均为预计阵容，最终以官方赛前公布为准。</p>
+      <div class="brief-chips">
+        <span class="brief-chip">预计首发</span>
+        <span class="brief-chip risk">西班牙边路伤病</span>
+        <span class="brief-chip risk">奥地利防线不整</span>
+      </div>
+    </div>
+
+    <div class="lineup-grid">
+      <div class="lineup-card">
+        <h4>🇪🇸 西班牙预计首发</h4>
+        <div class="lineup-formation">阵型：4-3-3</div>
+        
+        <div class="lineup-position">
+          <span class="position-label">门将</span>
+          <span class="player-name">乌奈·西蒙</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">右后卫</span>
+          <span class="player-name">马科斯·略伦特 / 波罗</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中后卫</span>
+          <span class="player-name">库巴西</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中后卫</span>
+          <span class="player-name">拉波尔特</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">左后卫</span>
+          <span class="player-name">库库雷利亚</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">后腰</span>
+          <span class="player-name">罗德里</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中场</span>
+          <span class="player-name">佩德里</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中场</span>
+          <span class="player-name">梅里诺 / 奥尔莫</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">右边锋</span>
+          <span class="player-name">亚马尔</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中锋</span>
+          <span class="player-name">奥亚萨瓦尔</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">左边锋</span>
+          <span class="player-name">巴埃纳</span>
+        </div>
+
+        <div class="injury-note">
+          <strong>伤缺：</strong>尼科·威廉姆斯（内收肌中度拉伤）、皮诺（肩锁关节扭伤）—— 两名主力边路爆破手缺席，边路纵深突破能力下滑
+        </div>
+      </div>
+
+      <div class="lineup-card">
+        <h4>🇦🇹 奥地利预计首发</h4>
+        <div class="lineup-formation">阵型：4-2-3-1</div>
+        
+        <div class="lineup-position">
+          <span class="position-label">门将</span>
+          <span class="player-name">巴赫曼</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">右后卫</span>
+          <span class="player-name">波施</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中后卫</span>
+          <span class="player-name">林哈特</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中后卫</span>
+          <span class="player-name">德拉戈维奇</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">左后卫</span>
+          <span class="player-name">莱默尔（客串）</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">后腰</span>
+          <span class="player-name">萨比策</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">后腰</span>
+          <span class="player-name">塞瓦尔德</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">前腰</span>
+          <span class="player-name">阿拉巴</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">右边锋</span>
+          <span class="player-name">鲍姆加特纳</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">左边锋</span>
+          <span class="player-name">格雷戈里奇</span>
+        </div>
+        <div class="lineup-position">
+          <span class="position-label">中锋</span>
+          <span class="player-name">阿瑙托维奇</span>
+        </div>
+
+        <div class="injury-note">
+          <strong>伤缺/隐患：</strong>姆韦内（左后卫受伤）—— 莱默尔或波施可能客串左后卫；鲍姆加特纳右大腿受伤出战存疑；阿瑙托维奇膝伤带伤上阵
+        </div>
+      </div>
+    </div>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>世界体育报、直播吧、腾讯体育、懂球帝、搜狐体育 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是 · 首发状态：预计
+    </div>
+  </section>
+
+  <!-- 球队打法克制分析 -->
+  <section>
+    <h2>球队打法克制分析</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>传控足球 vs 高位逼抢，西班牙控球优势明显但需应对开局抢攻，奥地利60分钟后体能下滑是突破口。</strong></p>
+      <div class="brief-chips">
+        <span class="brief-chip hot">战术风格碰撞</span>
+        <span class="brief-chip green">西班牙控球占优</span>
+        <span class="brief-chip risk">奥地利开局抢攻</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="tactics-card">
+        <h4>🇪🇸 西班牙战术特点</h4>
+        <p><strong>核心打法：</strong>极致传控 + 肋部渗透</p>
+        <p><strong>控球率：</strong>场均69%，本届赛事最高之一</p>
+        <p><strong>传球能力：</strong>场均716脚传球，91%成功率</p>
+        <p><strong>进攻方式：</strong>通过中场短传拉扯，边中结合肋部渗透，进攻点分散</p>
+        <p><strong>防守特点：</strong>高位压迫 + 阵地防守稳固，小组赛零失球</p>
+        <p><strong>弱点：</strong>缺少强力中锋，破密集防守效率一般；边路伤病影响纵深突破</p>
+      </div>
+
+      <div class="tactics-card">
+        <h4>🇦🇹 奥地利战术特点</h4>
+        <p><strong>核心打法：</strong>高位逼抢 + 快速反击</p>
+        <p><strong>逼抢强度：</strong>开场全员中场贴身高压，试图切断后场出球</p>
+        <p><strong>反击速度：</strong>丢失球权后立刻退守，依靠阿拉巴长传发动反击</p>
+        <p><strong>进攻方式：</strong>边路传中 + 定位球 + 远射，得分手段多样</p>
+        <p><strong>防守特点：</strong>前60分钟逼抢强度高，之后体能下滑明显</p>
+        <p><strong>弱点：</strong>防守波动大，场均失2球；边路防守空档大；体能持续性不足</p>
+      </div>
+    </div>
+
+    <h3>战术克制分析</h3>
+    <div class="tactics-card">
+      <h4>关键对位分析</h4>
+      <p><strong>1. 开局阶段（0-20分钟）：</strong>奥地利大概率全力逼抢，试图利用开局打乱西班牙传控节奏。西班牙后场出球能力是关键，若能平稳度过开局抢攻期，后续将逐渐掌控比赛。</p>
+      <p><strong>2. 中场控制（20-60分钟）：</strong>西班牙逐渐建立控球优势，罗德里vs萨比策的中场对决将决定比赛节奏。佩德里的小范围摆脱能力对破解逼抢至关重要。</p>
+      <p><strong>3. 体能拐点（60分钟后）：</strong>奥地利逼抢强度下降，防守漏洞增多，西班牙有望在比赛后半段扩大优势。这是西班牙最可能锁定胜局的时间段。</p>
+      <p><strong>4. 边路对决：</strong>亚马尔vs莱默尔（客串左后卫）是本场最大看点。若亚马尔能在边路打开突破口，西班牙进攻将顺畅很多；反之若奥地利成功限制亚马尔，西班牙进攻效率将大打折扣。</p>
+    </div>
+  </section>
+
+  <!-- 技术统计对比分析 -->
+  <section>
+    <h2>技术统计对比分析</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙在控球、传球、防守数据上全面占优；奥地利进攻效率更高，但防守数据劣势明显。</strong></p>
+      <div class="brief-chips">
+        <span class="brief-chip green">西班牙控球优势</span>
+        <span class="brief-chip orange">奥地利效率更高</span>
+      </div>
+    </div>
+
+    <h3>小组赛核心数据对比</h3>
+    <div class="comparison-bar">
+      <div class="bar-home">69%</div>
+      <div class="bar-label">控球率</div>
+      <div class="bar-away">48%</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width: 59%; background: linear-gradient(to right, var(--blue) 0%, var(--blue) 59%, var(--orange) 59%, var(--orange) 100%);"></div></div>
+
+    <div class="comparison-bar" style="margin-top: 16px;">
+      <div class="bar-home">16.7次</div>
+      <div class="bar-label">场均射门</div>
+      <div class="bar-away">12.3次</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width: 58%; background: linear-gradient(to right, var(--blue) 0%, var(--blue) 58%, var(--orange) 58%, var(--orange) 100%);"></div></div>
+
+    <div class="comparison-bar" style="margin-top: 16px;">
+      <div class="bar-home">5.3次</div>
+      <div class="bar-label">场均射正</div>
+      <div class="bar-away">4.0次</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width: 57%; background: linear-gradient(to right, var(--blue) 0%, var(--blue) 57%, var(--orange) 57%, var(--orange) 100%);"></div></div>
+
+    <div class="comparison-bar" style="margin-top: 16px;">
+      <div class="bar-home">0球</div>
+      <div class="bar-label">小组赛失球</div>
+      <div class="bar-away">6球</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width: 0%; background: linear-gradient(to right, var(--green) 0%, var(--green) 0%, var(--red) 100%);"></div></div>
+
+    <div class="two-col" style="margin-top: 20px;">
+      <div class="team-stats">
+        <h4>🇪🇸 西班牙详细数据</h4>
+        <div class="stat-row">
+          <span class="stat-label">场均传球</span>
+          <span class="stat-value">716脚</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">传球成功率</span>
+          <span class="stat-value">91%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均xG</span>
+          <span class="stat-value">约1.8</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">射正转化率</span>
+          <span class="stat-value">约31%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均角球</span>
+          <span class="stat-value">约6.5个</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均犯规</span>
+          <span class="stat-value">约10次</span>
+        </div>
+      </div>
+
+      <div class="team-stats">
+        <h4>🇦🇹 奥地利详细数据</h4>
+        <div class="stat-row">
+          <span class="stat-label">场均xG</span>
+          <span class="stat-value">约0.89</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均xGA</span>
+          <span class="stat-value">约1.76</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">射门转化率</span>
+          <span class="stat-value">22.2%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均被射门</span>
+          <span class="stat-value">约14次</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均抢断</span>
+          <span class="stat-value">约18次</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">场均犯规</span>
+          <span class="stat-value">约15次</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-source">
+      <strong>数据来源：</strong>Opta、FBref、球迷屋、懂球帝、抖音体育数据 · 采集时间：2026-07-02 11:15 · 多源交叉验证：是
+    </div>
+  </section>
+
+  <!-- 进球时段分布 -->
+  <section>
+    <h2>进球时段分布</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙进球分布较均匀，下半场进球能力更强；奥地利前60分钟威胁大，之后明显下滑。</strong></p>
+      <div class="brief-chips">
+        <span class="brief-chip">西班牙：下半场更强</span>
+        <span class="brief-chip orange">奥地利：前60分钟</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="team-stats">
+        <h4>🇪🇸 西班牙进球时段</h4>
+        <div class="stat-row">
+          <span class="stat-label">0-15分钟</span>
+          <span class="stat-value">1球 (20%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">16-30分钟</span>
+          <span class="stat-value">0球 (0%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">31-45分钟</span>
+          <span class="stat-value">1球 (20%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">46-60分钟</span>
+          <span class="stat-value">1球 (20%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">61-75分钟</span>
+          <span class="stat-value">1球 (20%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">76-90分钟</span>
+          <span class="stat-value">1球 (20%)</span>
+        </div>
+        <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">
+          总计：5球 · 分布均匀，下半场略占优
+        </div>
+      </div>
+
+      <div class="team-stats">
+        <h4>🇦🇹 奥地利进球时段</h4>
+        <div class="stat-row">
+          <span class="stat-label">0-15分钟</span>
+          <span class="stat-value">2球 (33%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">16-30分钟</span>
+          <span class="stat-value">1球 (17%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">31-45分钟</span>
+          <span class="stat-value">1球 (17%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">46-60分钟</span>
+          <span class="stat-value">1球 (17%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">61-75分钟</span>
+          <span class="stat-value">0球 (0%)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">76-90分钟</span>
+          <span class="stat-value">1球 (16%)</span>
+        </div>
+        <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">
+          总计：6球 · 上半场集中，60-75分钟空档
+        </div>
+      </div>
+    </div>
+
+    <h3>对本场的影响</h3>
+    <div class="tactics-card">
+      <p><strong>开局阶段：</strong>奥地利大概率在开局全力抢攻，西班牙需重点防范前15分钟丢球。若能稳住开局，奥地利逼抢效果将随时间递减。</p>
+      <p><strong>下半场中段：</strong>60-75分钟是奥地利体能瓶颈期，也是西班牙扩大比分的黄金窗口。这个时段西班牙进球概率较高。</p>
+      <p><strong>补时阶段：</strong>两队都有补时进球记录，最后时刻仍需保持专注。</p>
+    </div>
+  </section>
+
+  <!-- 数据交叉验证 -->
+  <section>
+    <h2>数据交叉验证</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>多源数据一致性较高，核心结论可信度良好。</strong>比赛时间、场地、小组赛战绩、FIFA排名等关键信息多源一致。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">数据一致性高</span>
+        <span class="brief-chip">多源交叉验证</span>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>数据项</th>
+          <th>来源A</th>
+          <th>来源B</th>
+          <th>来源C</th>
+          <th>一致性</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>比赛时间</td>
+          <td>07-03 03:00</td>
+          <td>07-03 03:00</td>
+          <td>07-03 03:00</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>比赛场地</td>
+          <td>洛杉矶SoFi</td>
+          <td>洛杉矶体育场</td>
+          <td>洛杉矶SoFi</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>西班牙排名</td>
+          <td>#3</td>
+          <td>#3</td>
+          <td>#3</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>奥地利排名</td>
+          <td>#24</td>
+          <td>#23</td>
+          <td>#24</td>
+          <td><span class="tag orange">基本一致</span></td>
+        </tr>
+        <tr>
+          <td>西班牙小组赛</td>
+          <td>2胜1平</td>
+          <td>2胜1平</td>
+          <td>2胜1平</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>奥地利小组赛</td>
+          <td>1胜1平1负</td>
+          <td>1胜1平1负</td>
+          <td>1胜1平1负</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>西班牙失球</td>
+          <td>0球</td>
+          <td>0球</td>
+          <td>0球</td>
+          <td><span class="tag green">一致</span></td>
+        </tr>
+        <tr>
+          <td>奥地利进球</td>
+          <td>6球</td>
+          <td>6球</td>
+          <td>7球</td>
+          <td><span class="tag orange">基本一致</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="data-source">
+      <strong>验证来源：</strong>央视网体育、FIFA官方、今日头条体育媒体、懂球帝、球迷屋、直播吧 · 验证时间：2026-07-02 11:15
+    </div>
+  </section>
+
+  <!-- 胜平负预测 -->
+  <section>
+    <h2>胜平负预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙常规时间取胜概率较高，平局需重点防范，奥地利直接取胜概率较低。</strong></p>
+      <div class="brief-chips">
+        <span class="brief-chip green">首选：主胜</span>
+        <span class="brief-chip violet">次防：平局</span>
+      </div>
+    </div>
+
+    <div class="prediction-grid">
+      <div class="prediction-card win">
+        <div class="label">西班牙胜</div>
+        <div class="prob">58%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card draw">
+        <div class="label">平局</div>
+        <div class="prob">27%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card loss">
+        <div class="label">奥地利胜</div>
+        <div class="prob">15%</div>
+        <div class="label">概率</div>
+      </div>
+    </div>
+
+    <h3>预测依据</h3>
+    <div class="tactics-card">
+      <p><strong>支持西班牙取胜的因素：</strong></p>
+      <p>1. 整体实力差距明显，FIFA排名第3 vs 第24，身价10.2亿 vs 2.72亿</p>
+      <p>2. 防守稳定性冠绝赛事，小组赛零失球记录</p>
+      <p>3. 传控体系成熟，控球率69%，能有效控制比赛节奏</p>
+      <p>4. 阵容深度充足，末轮轮换后核心球员体能充沛</p>
+      <p>5. 奥地利60分钟后体能下滑，西班牙下半场优势扩大</p>
+    </div>
+    <div class="tactics-card">
+      <p><strong>平局风险因素：</strong></p>
+      <p>1. 西班牙缺少强力中锋，破密集防守效率一般</p>
+      <p>2. 边路主力伤缺，纵深突破能力下降</p>
+      <p>3. 奥地利防守韧性不错，有死守偷一分的可能</p>
+      <p>4. 淘汰赛单场决胜，双方可能相对谨慎</p>
+    </div>
+    <div class="tactics-card">
+      <p><strong>奥地利爆冷因素：</strong></p>
+      <p>1. 开局高压逼抢可能打乱西班牙节奏，取得领先</p>
+      <p>2. 定位球和反击是奥地利的得分利器</p>
+      <p>3. 西班牙面对高强度逼抢时后场出球存在失误风险</p>
+    </div>
+  </section>
+
+  <!-- 让球胜平负预测 -->
+  <section>
+    <h2>让球胜平负预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>西班牙让1球情况下，让球平概率最高，其次是让球胜。</strong>西班牙更可能以1球小胜，净胜2球以上难度较大。</p>
+      <div class="brief-chips">
+        <span class="brief-chip violet">首选：让球平</span>
+        <span class="brief-chip green">次选：让球胜</span>
+      </div>
+    </div>
+
+    <div class="prediction-grid">
+      <div class="prediction-card win">
+        <div class="label">让球胜</div>
+        <div class="prob">35%</div>
+        <div class="label">（赢2球+）</div>
+      </div>
+      <div class="prediction-card draw">
+        <div class="label">让球平</div>
+        <div class="prob">38%</div>
+        <div class="label">（赢1球）</div>
+      </div>
+      <div class="prediction-card loss">
+        <div class="label">让球负</div>
+        <div class="prob">27%</div>
+        <div class="label">（平/负）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 比分预测 -->
+  <section>
+    <h2>比分预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>首选比分2-0，次选2-1，小比分格局为主。</strong>西班牙防守稳固，奥地利进攻有一定威胁，比分大概率在2球左右。</p>
+      <div class="brief-chips">
+        <span class="brief-chip green">首选：2-0</span>
+        <span class="brief-chip orange">次选：2-1</span>
+        <span class="brief-chip">备选：1-0</span>
+      </div>
+    </div>
+
+    <h3>热门比分TOP6</h3>
+    <div class="score-prediction">
+      <div class="score-item primary">
+        <div class="score">2-0</div>
+        <div class="prob">概率约18%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">2-1</div>
+        <div class="prob">概率约15%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">1-0</div>
+        <div class="prob">概率约14%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">1-1</div>
+        <div class="prob">概率约12%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">3-0</div>
+        <div class="prob">概率约10%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">3-1</div>
+        <div class="prob">概率约8%</div>
+      </div>
+    </div>
+
+    <h3>比分逻辑</h3>
+    <div class="tactics-card">
+      <p><strong>2-0（首选）：</strong>西班牙稳守控球，压制对手，奥地利反击难破门，契合西班牙小组赛零封特质。</p>
+      <p><strong>2-1（次选）：</strong>西班牙掌控局面取得领先，奥地利依靠定位球或反击偷入一球。</p>
+      <p><strong>1-0（备选）：</strong>边路伤病影响西班牙进攻效率，小胜过关。</p>
+      <p><strong>1-1（防冷）：</strong>西班牙久攻不下，奥地利抓住机会扳平，最终平局收场。</p>
+    </div>
+  </section>
+
+  <!-- 总进球数预测 -->
+  <section>
+    <h2>总进球数预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>总进球数倾向2-3球，2.5小球方向略占优。</strong></p>
+      <div class="brief-chips">
+        <span class="brief-chip">首选：2球</span>
+        <span class="brief-chip orange">次选：3球</span>
+        <span class="brief-chip">大小球：小球</span>
+      </div>
+    </div>
+
+    <div class="score-prediction">
+      <div class="score-item primary">
+        <div class="score">2球</div>
+        <div class="prob">概率约30%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">3球</div>
+        <div class="prob">概率约26%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">1球</div>
+        <div class="prob">概率约18%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">4球</div>
+        <div class="prob">概率约14%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">0球</div>
+        <div class="prob">概率约6%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">5球+</div>
+        <div class="prob">概率约6%</div>
+      </div>
+    </div>
+
+    <h3>大小球判断</h3>
+    <div class="prediction-grid">
+      <div class="prediction-card win">
+        <div class="label">大球（2.5+）</div>
+        <div class="prob">46%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card draw">
+        <div class="label">走水（恰好2.5）</div>
+        <div class="prob">0%</div>
+        <div class="label">概率</div>
+      </div>
+      <div class="prediction-card loss">
+        <div class="label">小球（2.5-）</div>
+        <div class="prob">54%</div>
+        <div class="label">概率</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 半全场预测 -->
+  <section>
+    <h2>半全场预测</h2>
+
+    <div class="module-brief">
+      <p class="brief-text"><strong>半场平局概率较高，全场西班牙取胜是最可能的走势。</strong>奥地利开局逼抢可能导致上半场胶着，西班牙下半场逐渐拉开差距。</p>
+      <div class="brief-chips">
+        <span class="brief-chip violet">半场：平</span>
+        <span class="brief-chip green">全场：胜</span>
+      </div>
+    </div>
+
+    <h3>半全场组合概率</h3>
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>半场 \ 全场</th>
+          <th>西班牙胜</th>
+          <th>平局</th>
+          <th>奥地利胜</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>西班牙胜</strong></td>
+          <td><span class="odds-highlight">28%</span></td>
+          <td>4%</td>
+          <td>3%</td>
+        </tr>
+        <tr>
+          <td><strong>平局</strong></td>
+          <td><span class="odds-highlight">26%</span></td>
+          <td>15%</td>
+          <td>8%</td>
+        </tr>
+        <tr>
+          <td><strong>奥地利胜</strong></td>
+          <td>4%</td>
+          <td>8%</td>
+          <td>4%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>首选半全场组合</h3>
+    <div class="score-prediction">
+      <div class="score-item primary">
+        <div class="score">平-胜</div>
+        <div class="prob">概率约26%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">胜-胜</div>
+        <div class="prob">概率约28%</div>
+      </div>
+      <div class="score-item">
+        <div class="score">平-平</div>
+        <div class="prob">概率约15%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI分析 -->
+  <section>
+    <h2>AI 分析</h2>
+
+    <div class="ai-analysis">
+      <h4>🤖 综合研判结论</h4>
+      <p>基于多维度数据交叉验证，本场比赛西班牙在实力、状态、防守稳定性上均占据明显优势，常规时间取胜概率约58%。奥地利依靠朗尼克的高位逼抢体系和高效反击有一定爆冷可能，但整体胜率偏低（约15%）。</p>
+      <p>战术层面，这是一场典型的传控vs高压的风格对决。西班牙的控球优势在60分钟后会更加明显，因为奥地利的逼抢强度会随体能下降而减弱。这也是为什么我们更看好西班牙下半场拉开差距的原因。</p>
+      <p>需要注意的风险点：西班牙边路主力伤缺可能影响进攻效率，奥地利开局抢攻可能制造麻烦。建议重点防范平局，比分首选2-0，次选2-1。</p>
+      <p>淘汰赛单场决胜的偶然性需要考虑，若90分钟战平，加时赛和点球大战的变数会显著增加。但从90分钟常规时间来看，西班牙优势还是比较明确的。</p>
+    </div>
+  </section>
+
+  <!-- 风险提示 -->
+  <section>
+    <h2>风险提示</h2>
+
+    <div class="risk-panel">
+      <h4>⚠️ 投资风险提示</h4>
+      <ul class="risk-list">
+        <li>足球比赛存在较大偶然性，以上分析仅供参考，不构成任何投注建议</li>
+        <li>首发阵容可能与预计存在差异，伤病、停赛等因素可能影响比赛走势</li>
+        <li>裁判尺度、天气变化、红黄牌等突发因素可能改变比赛格局</li>
+        <li>淘汰赛单场决胜，加时赛和点球大战增加了结果的不确定性</li>
+        <li>盘口数据实时变动，临场水位可能与本文数据存在差异</li>
+        <li>历史交锋记录参考价值有限，不能简单套用过往战绩</li>
+        <li>请理性看待比赛分析，切勿盲目跟风投注</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 免责声明 -->
+  <div class="disclaimer">
+    <p><strong>免责声明</strong></p>
+    <p>本报告所有分析内容均基于公开数据整理，仅供足球爱好者交流讨论使用，不构成任何投注建议或投资指导。</p>
+    <p>足球比赛结果受多种因素影响，具有高度不确定性。请理性观赛，远离非法赌球。</p>
+    <p>数据截止时间：2026-07-02 11:15 · 报告生成时间：2026-07-02</p>
+  </div>
+
+</div>
+
+</body>
+</html>
