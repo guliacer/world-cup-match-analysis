@@ -18,6 +18,14 @@
 >
 > 请理性看球，拒绝赌博。
 
+## 项目展示
+
+三张长截图展示了生成后的比赛分析页面效果。截图放在同一排，仓库页面较窄时可以左右滑动查看。
+
+| 西班牙 vs 奥地利 | 葡萄牙 vs 克罗地亚 | 瑞士 vs 阿尔及利亚 |
+| --- | --- | --- |
+| <a href="docs/images/showcase-spain-austria.png"><img src="docs/images/showcase-spain-austria.png" alt="西班牙 vs 奥地利比赛预测分析长截图" width="360"></a> | <a href="docs/images/showcase-portugal-croatia.png"><img src="docs/images/showcase-portugal-croatia.png" alt="葡萄牙 vs 克罗地亚比赛预测分析长截图" width="360"></a> | <a href="docs/images/showcase-switzerland-algeria.png"><img src="docs/images/showcase-switzerland-algeria.png" alt="瑞士 vs 阿尔及利亚比赛预测分析长截图" width="360"></a> |
+
 ## 项目简介
 
 本项目用于生成「世界杯比赛预测分析 HTML 页面」。仓库内包含分析规则、网页模板、示例生成脚本，以及由不同 AI 工具生成的静态 HTML 分析报告。
